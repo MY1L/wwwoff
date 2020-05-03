@@ -12,7 +12,7 @@
 body{font-family:Monu11,-apple-system,BlinkMacSystemFont,'Microsoft YaHei UI',sans-serif;font-size:100%;color:#222;margin:0 5% 0 15%}
 header, label{margin:.5em 1em}
 h1{font-size:2.5em;font-weight:normal;margin:1.5em 0 .5em}
-h2{font-size:1.5em;font-weight:normal;margin:1.5em 0 0}
+h2{font-size:1.5em;font-weight:normal;margin:1.5em 0 0}h2:hover:after{color:#07FA;content:"❟"}
 p{font-size:1em;margin:0 0 1em 0}
 select, option, pre{font-family:inherit}
 div > h2{text-align:right}
@@ -23,28 +23,30 @@ background:linear-gradient(45deg,#09F9 0%,#07F1 20%,#07F3 50%,#09F9 50%) repeat-
 animation:wamove 1s infinite linear}
 a:active{background-size:1em .25em}
 a[target]:after{content:'↗';color:#07F;font-size:1.5em}
+.my1l:after{font-size:1em!important;position:relative;top:-.5em}
 pre{border:solid 1px #F07;padding:1em;white-space:pre-line}
 pre:focus{border-color:#07F;
-background:linear-gradient(-45deg,#09F9 0%,#07F1 20%,#07F3 50%,#09F9 50%) repeat-x;background-size:2em .2em;
+background:linear-gradient(45deg,#09F9 0%,#07F1 20%,#07F3 50%,#09F9 50%) repeat-x;background-size:2em .2em;
 animation:wamove .6s infinite linear}
 table{border:solid 1px #CCC;background:#EEE;font-size:2em;text-align:center}
 th{border:solid 1px #CCC;font-size:.5em;padding:.5em .2em;font-weight:normal}
 td{border:solid 1px #CCC;background:#FFF;width:1.2em}
 .th{font-size:.5em;padding:1em .2em}
 .reserved{background-color:#CCC}
-.pua{background-color:#F078}
-.todo{color:#07F;background-color:#FF9;background:
+.pua{background-color:#F077;background:repeating-linear-gradient(25deg,#F077,#CCC .05em,#CCC .06em,#F077 .11em,#F077 .12em)}
+.todo{color:#07F;background-color:#07F3;background:
 linear-gradient(45deg,#FFF 25%,#0000 25%,#0000 75%,#FFF 75%,#FFF),
 linear-gradient(45deg,#FFF 26%,#0000 26%,#0000 74%,#FFF 74%,#FFF);
 background-size:.4em .4em;
 background-position:0 0,.2em .2em}
-.note{color:#F07A}
-.warn{background:repeating-linear-gradient(-45deg,#FF7,#FF7 .1em,#FFF .1em,#FFF .2em)}
+.note{color:#F07A;white-space:nowrap}
+.warn{background-color:#FFC;background:repeating-linear-gradient(-45deg,#FF7,#FFF .05em,#FFF .1em,#FF7 .15em,#FF7 .16em)}
 .space{border:.06em dotted #F07A}
 tfoot{text-align:left}
 ul{list-style:disc inside url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='5' fill='%23CCC'/%3E%3Cpath fill='%23CCC' d='M8 8h5v5H8z'%3E%3CanimateTransform attributeName='transform' type='rotate' begin='0s' dur='8s' from='0 8 8' to='360 8 8' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E");margin:.2em}
 ol{list-style:decimal inside;margin:.2em}
 li{margin:0 1em}
+.addu{font-size:.8em;padding:.2em 1em;list-style:none}.addu:before{content:"※ "}
 rt{font-size:.7em}
 #nav{float:right;clear:right;right:0;top:10em}
 svg:hover text{fill:#07FC}
@@ -66,7 +68,7 @@ svg:hover text{fill:#07FC}
 
 <header>
 <pre contenteditable="true">这儿可任意输入以测试Monu11预览版与其它系统字体搭配的效果。<span  style="color:#CCC">也推荐在此发掘字体内藏的彩蛋。</span><br><br><br></pre>
-<p><a href="/">MYIL</a>：左下角可切换字体，粗体比常规缺少字符是正常的，以下为Monu包含的字符一览。对了，光标停留在某些字符上会有提示。如果发现有问题请<a target="_blank" href="https://trello.com/b/PKO8boiM/">告知</a></p><!--<svg width="22" height="22" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="6"/><path d="M11 11h6v6H11z"><animateTransform attributeName="transform" type="rotate" begin="0s" dur="8s" from="0 11 11" to="360 11 11" repeatCount="indefinite"/></path></svg>--></header>
+<p><a target="_blank" href="https://trello.com/b/PKO8boiM/" class="my1l">MYIL</a>: 以下为<a target="_blank" href="https://github.com/MY1L/QuQi" class="my1l">Monu</a>可用字符一览。左下角可切换字体，粗体比常规缺少字符是正常的。对了，光标停留在某些字符上会有提示。如果发现有问题请<a target="_blank" href="https://github.com/MY1L/QuQi/issues">告知</a></p></header>
 
 <div id="nav"><h2>目录</h2>
 <ul>
@@ -86,7 +88,7 @@ svg:hover text{fill:#07FC}
 <li><a href="#UA720">拉丁文扩展</a>〔丁〕</li>
 <li>拉丁文单位<a href="#U3300">〔中日韩兼容字符〕</a></li>
 <li>拉丁文连字<a href="#UFB00">〔字母表达形式〕</a></li>
-<li style="font-size:.8em"><a href="#UE000">拉丁文变体</a>〔私用区〕</li>
+<li class="addu"><a href="#UE000">拉丁文变体</a>〔私用区〕</li>
 		</ol>
 </li>
 <li>东亚字符
@@ -95,19 +97,19 @@ svg:hover text{fill:#07FC}
 <li><a href="#UFE10">竖排形式</a></li>
 <li><a href="#UFE30">中日韩相容形式</a></li>
 <li><a href="#UFF00">半角及全角符号</a></li>
-<li style="font-size:.8em">Monu的 <a href="#U3300">中日韩兼容字符</a> 暂无东亚字符</li>
+<li class="addu">Monu的 <a href="#U3300">中日韩兼容字符</a> 暂无东亚字符</li>
 		</ol>
 </li>
 <li>假名
 	<ol>
 <li><a href="#U3040">平假名</a></li>
 <li><a href="#U30A0">片假名</a></li>
-<li><a href="#U31F0">片假名语音扩展</a></li>
+<li><a href="#U31F0">片假名音标扩展</a></li>
 <li>半角片假名<a href="#UFF00">〔半角及全角〕</a></li>
 <li><a href="#U1B000">假名补充</a></li>
 <li><a href="#U1B130">小型假名扩展</a></li>
-<li><a href="#U20000" title="位于中日韩统一表意文字扩展">假名合字</a></li>
-<li style="font-size:.8em"><a href="#UE341">竖排用小型假名</a>〔私用区〕</li>
+<li>假名合字<a href="#U20000">〔中日韩统一表意文字扩展〕</a></li>
+<li class="addu"><a href="#UE341">竖排用小型假名</a>〔私用区〕</li>
 		</ol>
 </li>
 <li>标点符号
@@ -159,7 +161,7 @@ svg:hover text{fill:#07FC}
 <li><a href="#U2600">杂项符号</a></li>
 <li><a href="#U2B00">杂项符号及箭头</a></li>
 <li><a href="#U3000">中日韩标点符号</a></li>
-<li>等等…</li>
+<li class="addu">等等…</li>
 		</ol>
 </li>
 </ul>
@@ -183,7 +185,7 @@ svg:hover text{fill:#07FC}
 <tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>……</th><td colspan="16" title="省略" class="warn">･･････</td></tr>
-<tr><th>U+002x</th><td title="U+0020: SPACE [SP]，html不允许空格单独呈现的样子，只能括起来展示宽度。"><span class="note">[ ]</span></td><td>!</td><td>"</td><td>#</td><td>$</td><td>%</td><td>&amp;</td><td>'</td><td>(</td><td>)</td><td>*</td><td>+</td><td>,</td><td>-</td><td>.</td><td>/</td>
+<tr><th>U+002x</th><td title="U+0020: SPACE [SP]，括起来展示空格宽度"><span class="note">[ ]</span></td><td>!</td><td>"</td><td>#</td><td>$</td><td>%</td><td>&amp;</td><td>'</td><td>(</td><td>)</td><td>*</td><td>+</td><td>,</td><td>-</td><td>.</td><td>/</td>
 	</tr>
 <tr><th>U+003x</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>:</td><td>;</td><td>&lt;</td><td>=</td><td>&gt;</td><td>?</td>
 	</tr>
@@ -298,8 +300,8 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 1.0.0（89个）→3.0（94(+5)个）→4.0（96(+2)个）</li>
-<li>国际音标之所以常用反转的符号并不是故意麻烦人，而是创造时为方便铅字打印不用造新字。</li>
-<li>本区段符号全是我自制的，字距还没设，让我想想。</li>
+<li>国际音标之所以常用反转的符号并不是故意麻烦人，而是创造时为方便铅字印刷不用铸造新铅字。</li>
+<li>字体本区段的符号全是自制，字距还没设，让我想想。</li>
 </ol></td></tr>
 	</tfoot>
 <tbody>
@@ -427,12 +429,8 @@ svg:hover text{fill:#07FC}
 <td class="todo" title="U+034C: COMBINING ALMOST EQUAL TO ABOVE"><span class="note">◌</span>͌</td>
 <td class="todo" title="U+034D: COMBINING LEFT RIGHT ARROW BELOW"><span class="note">◌</span>͍</td>
 <td class="todo" title="U+034E: COMBINING UPWARDS ARROW BELOW"><span class="note">◌</span>͎</td>
-<td class="todo" title="U+034F: COMBINING GRAPHEME JOINER (alias CGJ)"><span class="note">◌</span>͏</td>
+<td class="todo" title="U+034F: COMBINING GRAPHEME JOINER (别名 CGJ)"><span class="note">◌</span>͏</td>
 	</tr>
-
-
-
-
 <tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 	</tbody></table>
 
@@ -538,7 +536,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 3.2（16个）→5.0（20(+4)个）→5.1（36(+16)个）→5.2（38(+2)个）→6.0（40(+2)个）→7.0（48(+8)个）</li>
-<li>本区段收录扩充其它民族用的西里尔文。</li>
+<li>本区段收录其它民族用的西里尔文。</li>
 <li>原字体只含16个本区段字符，有意保持Ԛ为原样。</li>
 <li>格子区域的字符有需求再做。</li>
 </ol></td></tr>
@@ -702,7 +700,7 @@ svg:hover text{fill:#07FC}
 	</thead>
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
-<li>本区段全是我自制的。</li>
+<li>字体本区段的符号全是自制的。</li>
 <li>共27字符。</li>
 </ol></td></tr>
 	</tfoot><tbody>
@@ -747,7 +745,7 @@ svg:hover text{fill:#07FC}
 	</thead>
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
-<li>本区段全是我自制的。</li>
+<li>字体本区段的符号全是自制的。</li>
 <li>共13字符。</li>
 </ol></td></tr>
 	</tfoot></table>
@@ -760,7 +758,7 @@ svg:hover text{fill:#07FC}
 	</thead>
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
-<li>本区段全是我自制的。</li>
+<li>字体本区段的符号全是自制的。</li>
 <li>11字，不用数。</li>
 </ol></td></tr>
 	</tfoot><tbody>
@@ -777,7 +775,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 1.0.0（128个）</li>
-<li>本区段全是我自制的。</li>
+<li>字体本区段的符号全是自制的。</li>
 <li>32个常用制表符。</li>
 </ol></td></tr>
 	</tfoot><tbody>
@@ -794,7 +792,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>据Unicode 8.0</li>
-<li>本区段全是我自制的。</li>
+<li>字体本区段的符号全是自制的。</li>
 <li>10字符。</li>
 </ol></td></tr>
 	</tfoot><tbody>
@@ -828,7 +826,7 @@ svg:hover text{fill:#07FC}
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 1.0.0（106个）→3.0（109(+3)个）→3.2（133(+24)个）→4.0（145(+12)个）→4.1（175(+30)个）→5.0（176(+1)个）→5.1（191(+15)个）→5.2（250(+59)个）→6.0（256(+6)个）</li>
 <li>本区段收录部分绘文字。</li>
-<li>22字符，全是我自制的。</li>
+<li>22字符全是自制。空心扑克符号的粗体难画（指♤♧的梗），大概不做啦。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
@@ -874,6 +872,10 @@ svg:hover text{fill:#07FC}
 <td title="U+26A3: DOUBLED MALE SIGN">⚣</td>
 <td title="U+26A4: INTERLOCKED FEMALE AND MALE SIGN">⚤</td>
 <td title="U+26A5: MALE AND FEMALE SIGN">⚥</td>
+<td class="todo"></td>
+<td class="todo"></td>
+<td class="todo"></td>
+<td class="todo"></td>
 <td title="U+26AA: MEDIUM WHITE CIRCLE">⚪</td>
 <td title="U+26AB: MEDIUM BLACK CIRCLE">⚫</td>
 <td colspan="16" title="省略" class="todo">･･････</td>
@@ -890,8 +892,8 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>本区段收录某些杂锦字体的装饰图形。</li>
-<li>40字符，全是自制的。</li>
 <li>因为某些原因统一码规定U+2780起是无衬线样式（U+277x不规定样式），也就是说无衬线字体可以重复2遍。</li>
+<li>40字符，全是自制的。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
@@ -1002,7 +1004,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="5" class="th"><ol>注释
 <li>Unicode 4.0（14个）→4.1（20 (+6)个）→5.0（31 (+11)个）→5.1（82 (+51)个）→5.2（87 (+5)个）→7.0（202 (+115)个）→8.0（206 (+4)个）→10.0（207 (+1)个）</li>
-<li>本<a href="#U2600">杂项符号</a>区段收录其它的<a href="#U2190">箭头</a>、<a href="#U25A0">几何图形</a>，其中若干个符号又被指定为绘文字，如<span style="font-family:emoji">⭐️</span>中号空心星<img alt="⭐️" src="https://twemoji.maxcdn.com/svg/2b50.svg" width="23" style="position:relative;top:.3em"/></li>
+<li>本<a href="#U2600">杂项符号</a>区段收录其它的<a href="#U2190">箭头</a>、<a href="#U25A0">几何图形</a>，其中若干个符号又被指定为绘文字，如中号空心星<span style="font-family:emoji,Monu11">⭐️</span></li>
 <li>显然5字符都是自制的。</li>
 </ol></td></tr>
 	</tfoot>
@@ -1104,7 +1106,7 @@ svg:hover text{fill:#07FC}
 <tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr lang="ja"><th>U+30Ax</th>
-<td title="U+30A0: KATAKANA-HIRAGANA DOUBLE HYPHEN">゠</td>
+<td title="U+30A0: KATAKANA-HIRAGANA DOUBLE HYPHEN，双连号">゠</td>
 <td>ァ</td><td>ア</td><td>ィ</td><td>イ</td><td>ゥ</td><td>ウ</td><td>ェ</td><td>エ</td><td>ォ</td><td>オ</td><td>カ</td><td>ガ</td><td>キ</td><td>ギ</td><td>ク</td>
 	</tr>
 <tr lang="ja"><th>U+30Bx</th>
@@ -1129,7 +1131,7 @@ svg:hover text{fill:#07FC}
 	</tr>
 	</tbody></table>
 
-<h2 id="U31F0">片假名语音扩展</h2>
+<h2 id="U31F0">片假名音标扩展</h2>
 <p>范围：U+31F0‒U+31FF（16/16个码位）<a target="_blank" href="https://www.unicode.org/charts/PDF/U31F0.pdf">统一码表U31F0.pdf</a></p>
 <table cellspacing="0">
 <thead>
@@ -1174,7 +1176,7 @@ svg:hover text{fill:#07FC}
 	</thead>
 <tfoot>
 <tr><td colspan="3" class="th"><ol>注释
-<li>原字体含2个该区段字符，「倒l」是我自制的。</li>
+<li>原字体含2个该区段字符，倒转「l」是我自制的。</li>
 </ol></td></tr>
 	</tfoot>
 <tbody><tr>
@@ -1214,10 +1216,10 @@ svg:hover text{fill:#07FC}
 <td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="U+E073	DLs" class="pua"></td><td title="U+E074	DLt" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td><td title="没用" class="pua"></td>
 	</tr>
 <tr><th>……</th><td colspan="16" title="没用" class="pua"></td></tr>
-<tr><td colspan="17" class="th" id="UE341">竖排用小型假名</td></tr>
-<tr><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td>
+<tr><td colspan="17" class="th" id="UE341">竖排用小型假名及「ー」</td></tr>
+<tr><th rowspan="2">U+E3xx</th><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td>
 	</tr>
-<tr><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td>
+<tr><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td><td class="pua"></td>
 	</tr>
 	</tbody></table>
 
@@ -1282,7 +1284,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>本区段也包含一些对应竖排字体特性的中文标点。</li>
-<li>为了方便竖排制作了这8个字符，还需要做。</li>
+<li>为了方便竖排制作了这8个字符。还需要做更多。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
@@ -1307,10 +1309,10 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>算是做了128个字符……</li>
-<li>半角片假名没有做完，已用黄色标出（差不多就是11持续预览版的原因）粗体的全角英文问题也没修。</li>
+<li>半角片假名没做完直接用会社ロゴ里出处不明的顶替，已用黄色标出（这差不多就是11持续预览版的原因）。粗体的全角英文问题也没修。</li>
 <li><ol style="list-style-type:lower-greek;margin:0">
 	<li>灰色区域的码位未被分配。</li>
-	<li>格子区域……很少见到有人使用。</li>
+	<li>格子区域……几乎没人用就不做了罢？如果有人确实需要，请告诉我。</li>
 		</ol>
 	</li>
 </ol></td></tr>
@@ -1478,7 +1480,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 6.0（2个）→10.0（256(+254)个）</li>
-<li>本区段收录1个古体<a href="#U30A0">片假名</a>和255个变体假名，我只做了6.0的2个。</li>
+<li>本区段收录1个古体<a href="#U30A0">片假名</a>和255个变体假名／変体仮名，我只做了6.0的2个。</li>
 <li>格子区域的字符太难画，放弃……还是让日本人来做罢。</li></ol></td></tr>
 	</tfoot>
 <tbody>
@@ -1557,7 +1559,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="2" class="th"><ol>注释
 <li>本区段收录部分带装饰的字母数字。</li>
-<li>2个带圈0解决<a href="#U2460">带圈数字</a>缺0的问题。</li>
+<li style="font-feature-settings:'zero'">2个带圈0解决<a href="#U2460">带圈数字</a>缺0的问题。</li>
 </ol>
 </td></tr>
 	</tfoot>
@@ -1574,7 +1576,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="1" class="th"><ol>注释
 <li>本<a href="#U2600">杂项符号</a>区段收录部分绘文字和<a href="#U2700">某些杂锦字体</a>的字符。</li>
-<li>全统一码应该只有这个区段能摆放自制的心碎符号。</li>
+<li>全统一码应该只有这个区段能摆放自制的心碎图标。</li>
 </ol></td></tr>
 	</tfoot>
 <tbody><tr>
@@ -1594,7 +1596,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>本区段收录的都被视为汉字，但有2个 假名合字／合略仮名 被当作汉字收录。</li>
-<li>合略仮名有4个：ゟ(より)、ヿ(コト)、𪜈(トモ)、𬼀(シテ)，还有大部分没被统一码收录。</li>
+<li>统一码收录的合略仮名目前有4个：ゟ(より)、ヿ(コト)、𪜈(トモ)、𬼀(シテ)，还有大部分没被收录。</li>
 <li>格子区域都是汉字（本字体目的是与系统中文字体搭配而非取代）</li>
 </ol></td></tr>
 	</tfoot>
@@ -1612,7 +1614,7 @@ svg:hover text{fill:#07FC}
 
 <label style="background-color:#FFFE;box-shadow:0 0 .3em 1em #FFFE;position:fixed;left:1em;bottom:1em">字体切换：<select onchange="testFont.style.fontFamily = this.value;">
 <option selected="selected" value="Monu11,-apple-system,BlinkMacSystemFont,'Microsoft YaHei UI'">Monu</option>
-<option value="Monu11Bold,-apple-system,BlinkMacSystemFont,'Microsoft YaHei UI'">Monu BoldC</option>
+<option value="Monu11Bold,-apple-system,BlinkMacSystemFont,'Microsoft YaHei UI'">Monu Bold</option>
 <option value="serif">serif</option>
 <option value="sans-serif">sans-serif</option>
 	</select>
