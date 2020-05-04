@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="author" content="MYIL"/>
 <title>字体预览</title>
-<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAk0lEQVR42mNgGB7gP0O5IRBvBOL/UDwfiOWR5BWAeAGS/AYgNkCW/IAkCcPvgJgfiAVwyIPEFEAGTMAiCcP3gfgBHvkJIAMO4lFACB+gigFNFBjQADJAEYg/kaEZEojQmDAi0ZAP8GhEimslIF5EhOYFcJuxJChGIHYC4ktYNF4AYgdiUyYjmmsWkJvEfUGYpvkIAEGqWPvmonHJAAAAAElFTkSuQmCC" type="image/png"/>
+<link rel="shortcut icon" href="anicon.png" type="image/png"/>
 <style>
 @font-face{font-family:"Monu11";src:url("woff/Monu11.woff2")}
 @font-face {font-family:"Monu11Bold";src:url("woff/Monu11Bold.woff2");font-weight:bold}
@@ -12,7 +12,7 @@
 body{font-family:Monu11,-apple-system,BlinkMacSystemFont,'Microsoft YaHei UI',sans-serif;font-size:100%;color:#222;margin:0 5% 0 15%}
 header, label{margin:.5em 1em}
 h1{font-size:2.5em;font-weight:normal;margin:1.5em 0 .5em}
-h2{font-size:1.5em;font-weight:normal;margin:1.5em 0 0}h2:hover:after{color:#07FA;content:"❟"}
+h2{font-size:1.5em;font-weight:normal;margin:1.5em 0 0}h2:hover:after{color:#08F;content:"❜";position:relative;top:-.5em}
 p{font-size:1em;margin:0 0 1em 0}
 select, option, pre{font-family:inherit}
 div > h2{text-align:right}
@@ -32,8 +32,8 @@ table{border:solid 1px #CCC;background:#EEE;font-size:2em;text-align:center}
 th{border:solid 1px #CCC;font-size:.5em;padding:.5em .2em;font-weight:normal}
 td{border:solid 1px #CCC;background:#FFF;width:1.2em}
 .th{font-size:.5em;padding:1em .2em}
-.reserved{background-color:#CCC}
-.pua{background-color:#F077;background:repeating-linear-gradient(25deg,#F077,#CCC .05em,#CCC .06em,#F077 .11em,#F077 .12em)}
+.reserved{font-size:.6em;color:#FFF;background-color:#CCC}
+.pua{background-color:#F077;background:repeating-linear-gradient(25deg,#F89,#CCC .05em,#CCC .06em,#F89 .11em,#F89 .12em)}
 .todo{color:#07F;background-color:#07F3;background:
 linear-gradient(45deg,#FFF 25%,#0000 25%,#0000 75%,#FFF 75%,#FFF),
 linear-gradient(45deg,#FFF 26%,#0000 26%,#0000 74%,#FFF 74%,#FFF);
@@ -41,12 +41,12 @@ background-size:.4em .4em;
 background-position:0 0,.2em .2em}
 .note{color:#F07A;white-space:nowrap}
 .warn{background-color:#FFC;background:repeating-linear-gradient(-45deg,#FF7,#FFF .05em,#FFF .1em,#FF7 .15em,#FF7 .16em)}
-.space{border:.06em dotted #F07A}
+.sp{border:.07em dotted #F07A}
 tfoot{text-align:left}
 ul{list-style:disc inside url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='5' fill='%23CCC'/%3E%3Cpath fill='%23CCC' d='M8 8h5v5H8z'%3E%3CanimateTransform attributeName='transform' type='rotate' begin='0s' dur='8s' from='0 8 8' to='360 8 8' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E");margin:.2em}
 ol{list-style:decimal inside;margin:.2em}
 li{margin:0 1em}
-.addu{font-size:.8em;padding:.2em 1em;list-style:none}.addu:before{content:"※ "}
+.addu{font-size:.8em;padding:.2em .5em;list-style:none}.addu:before{content:"※ "}
 rt{font-size:.7em}
 #nav{float:right;clear:right;right:0;top:10em}
 svg:hover text{fill:#07FC}
@@ -60,7 +60,7 @@ svg:hover text{fill:#07FC}
 <tr><th style="font-size:.4em">正常情况</th><td title="光标停留在某些字符上会有这样的提示。">☆</td></tr>
 <tr><th style="font-size:.4em">红色部分不属于该字符</th><td title="比如看不见的空格，或是只能用于组合的字符。"><span class="note">◌</span>゚</td></tr>
 <tr><th style="font-size:.4em">字体暂不包含</th><td class="todo">￥</td></tr>
-<tr><th style="font-size:.4em">字形存在问题<br>或是控制字之类没有字符</th><td class="warn" title="不是所有字符都有提示的，上面那个就没有。" >ﾏ</td></tr>
+<tr><th style="font-size:.4em">字形存在问题<br>或是控制字之类没有字符</th><td class="warn" title="不是所有字符都有提示的，上面那个就没有。">ﾏ</td></tr>
 <tr><th style="font-size:.4em">统一码宣布<br>此处无字</th><td title="保留" class="reserved"></td></tr>
 <tr><th style="font-size:.4em">位于私用区</th><td class="pua" title="这种别直接复制发送给没装Monu的人，对方看不到的。"></td></tr>
 	</tbody>
@@ -132,7 +132,7 @@ svg:hover text{fill:#07FC}
 <li><a href="#U2700">装饰符号</a></li>
 <li><a href="#U2600">杂项符号</a></li>
 <li><a href="#U2B00">杂项符号及箭头</a></li>
-<li><a href="#U1F300">杂项符号和象形文字</a></li>
+<li><a href="#U1F300">杂项符号及象形文字</a></li>
 		</ol>
 </li>
 <li>技术
@@ -156,10 +156,12 @@ svg:hover text{fill:#07FC}
 <li><a href="#U1B170">女书</a></li>
 		</ul>
 </li>
-<li>包含绘文字的区块
+<li id="emoji">包含绘文字的区块
 	<ol>
+<li><a href="#U2700">装饰符号</a></li>
 <li><a href="#U2600">杂项符号</a></li>
 <li><a href="#U2B00">杂项符号及箭头</a></li>
+<li><a href="#U1F300">杂项符号及象形文字</a></li>
 <li><a href="#U3000">中日韩标点符号</a></li>
 <li class="addu">等等…</li>
 		</ol>
@@ -185,7 +187,7 @@ svg:hover text{fill:#07FC}
 <tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>……</th><td colspan="16" title="省略" class="warn">･･････</td></tr>
-<tr><th>U+002x</th><td title="U+0020: SPACE [SP]，括起来展示空格宽度"><span class="note">[ ]</span></td><td>!</td><td>"</td><td>#</td><td>$</td><td>%</td><td>&amp;</td><td>'</td><td>(</td><td>)</td><td>*</td><td>+</td><td>,</td><td>-</td><td>.</td><td>/</td>
+<tr><th>U+002x</th><td title="U+0020: SPACE [SP]，括起来展示空格宽度"><span class="note">[ ]</span></td><td>!</td><td>"</td><td>#</td><td>$</td><td>%</td><td>&amp;</td><td>'</td><td>(</td><td>)</td><td>*</td><td>+</td><td>,</td><td title="U+002D: HYPHEN-MINUS，连减号，充当连字号‐U+2010或减号−U+2212">-</td><td>.</td><td>/</td>
 	</tr>
 <tr><th>U+003x</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>:</td><td>;</td><td>&lt;</td><td>=</td><td>&gt;</td><td>?</td>
 	</tr>
@@ -195,7 +197,7 @@ svg:hover text{fill:#07FC}
 	</tr>
 <tr><th>U+006x</th><td>`</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td><td>h</td><td>i</td><td>j</td><td>k</td><td>l</td><td>m</td><td>n</td><td>o</td>
 	</tr>
-<tr><th>U+007x</th><td>p</td><td>q</td><td>r</td><td>s</td><td>t</td><td>u</td><td>v</td><td>w</td><td>x</td><td>y</td><td>z</td><td>{</td><td>|</td><td>}</td><td>~</td><td title="U+007F<控制字>: DELETE [DEL]" class="warn"></td>
+<tr><th>U+007x</th><td>p</td><td>q</td><td>r</td><td>s</td><td>t</td><td>u</td><td>v</td><td>w</td><td>x</td><td>y</td><td>z</td><td>{</td><td>|</td><td>}</td><td title="U+007E: TILDE，波浪号">~</td><td title="U+007F<控制字>: DELETE [DEL]" class="warn"></td>
 	</tr>
 	</tbody></table>
 
@@ -213,10 +215,10 @@ svg:hover text{fill:#07FC}
 	</tfoot>
 <tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
-<tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
-<tr><th>U+00Ax</th><td title="U+00A0: NO-BREAK SPACE [&amp;nbsp;]"><span class="space"> </span></td><td>¡</td><td>¢</td><td>£</td><td>¤</td><td>¥</td><td>¦</td><td>§</td><td>¨</td><td>©</td><td>ª</td><td>«</td><td>¬</td><td>­</td><td>®</td><td>¯</td>
+<tr><th>……</th><td colspan="16" title="省略" class="warn">･･････</td></tr>
+<tr><th>U+00Ax</th><td title="U+00A0: NO-BREAK SPACE [&amp;nbsp;]，不换行空格／硬空格"><span class="sp"> </span></td><td>¡</td><td>¢</td><td>£</td><td>¤</td><td>¥</td><td>¦</td><td>§</td><td>¨</td><td>©</td><td>ª</td><td>«</td><td>¬</td><td title="U+00AD: SOFT HYPHEN [SHY]，软连字号">­</td><td>®</td><td>¯</td>
 	</tr>
-<tr><th>U+00Bx</th><td>°</td><td>±</td><td>²</td><td>³</td><td>´</td><td>µ</td><td>¶</td><td>·</td><td>¸</td><td>¹</td><td>º</td><td>»</td><td>¼</td><td>½</td><td>¾</td><td>¿</td>
+<tr><th>U+00Bx</th><td>°</td><td>±</td><td>²</td><td>³</td><td>´</td><td>µ</td><td>¶</td><td title="U+00B7: MIDDLE DOT : 中点，Georgian comma, Greek middle dot (ano teleia)，兼半角间隔号、国标间隔号"><span class="sp">·</span></td><td>¸</td><td>¹</td><td>º</td><td>»</td><td>¼</td><td>½</td><td>¾</td><td>¿</td>
 	</tr>
 <tr><th>U+00Cx</th><td>À</td><td>Á</td><td>Â</td><td>Ã</td><td>Ä</td><td>Å</td><td>Æ</td><td>Ç</td><td>È</td><td>É</td><td>Ê</td><td>Ë</td><td>Ì</td><td>Í</td><td>Î</td><td>Ï</td>
 	</tr>
@@ -300,13 +302,118 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 1.0.0（89个）→3.0（94(+5)个）→4.0（96(+2)个）</li>
-<li>国际音标之所以常用反转的符号并不是故意麻烦人，而是创造时为方便铅字印刷不用铸造新铅字。</li>
+<li>国际音标之所以常用倒转（Turned，例：ʞ/k）、翻转↔（Reversed，例：ɜ/ɛ）、颠倒↕（Inverted，例：ʀ/ʁ）符号并不是故意麻烦人，而是创造时为方便铅字印刷直接倒转现成的，不用铸造新铅字。</li>
 <li>字体本区段的符号全是自制，字距还没设，让我想想。</li>
 </ol></td></tr>
 	</tfoot>
 <tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+025x</th>
+<td title="U+0250: LATIN SMALL LETTER TURNED A">ɐ</td><td title="U+0251: LATIN SMALL LETTER ALPHA">ɑ</td>
+<td class="todo" title="U+0252: LATIN SMALL LETTER TURNED ALPHA">ɒ</td>
+<td class="todo" title="U+0253: LATIN SMALL LETTER B WITH HOOK">ɓ</td>
+<td class="todo" title="U+0254: LATIN SMALL LETTER OPEN O">ɔ</td>
+<td class="todo" title="U+0255: LATIN SMALL LETTER C WITH CURL">ɕ</td>
+<td class="todo" title="U+0256: LATIN SMALL LETTER D WITH TAIL">ɖ</td>
+<td class="todo" title="U+0257: LATIN SMALL LETTER D WITH HOOK">ɗ</td>
+<td class="todo" title="U+0258: LATIN SMALL LETTER REVERSED E">ɘ</td>
+<td title="U+0259: LATIN SMALL LETTER SCHWA">ə</td>
+<td class="todo" title="U+025A: LATIN SMALL LETTER SCHWA WITH HOOK">ɚ</td>
+<td class="todo" title="U+025B: LATIN SMALL LETTER OPEN E">ɛ</td>
+<td class="todo" title="U+025C: LATIN SMALL LETTER REVERSED OPEN E">ɜ</td>
+<td class="todo" title="U+025D: LATIN SMALL LETTER REVERSED OPEN E WITH HOOK">ɝ</td>
+<td class="todo" title="U+025E: LATIN SMALL LETTER CLOSED REVERSED OPEN E">ɞ</td>
+<td class="todo" title="U+025F: LATIN SMALL LETTER DOTLESS J WITH STROKE">ɟ</td>
+	</tr>
+<tr><th>U+026x</th>
+<td class="todo" title="U+0260: LATIN SMALL LETTER G WITH HOOK">ɠ</td>
+<td title="U+0261: LATIN SMALL LETTER SCRIPT G">ɡ</td>
+<td class="todo" title="U+0262: LATIN LETTER SMALL CAPITAL G">ɢ</td>
+<td class="todo" title="U+0263: LATIN SMALL LETTER GAMMA">ɣ</td>
+<td class="todo" title="U+0264: LATIN SMALL LETTER RAMS HORN">ɤ</td>
+<td title="U+0265: LATIN SMALL LETTER TURNED H">ɥ</td>
+<td class="todo" title="U+0266: LATIN SMALL LETTER H WITH HOOK">ɦ</td>
+<td class="todo" title="U+0267: LATIN SMALL LETTER HENG WITH HOOK">ɧ</td>
+<td class="todo" title="U+0268: LATIN SMALL LETTER I WITH STROKE">ɨ</td>
+<td class="todo" title="U+0269: LATIN SMALL LETTER IOTA">ɩ</td>
+<td class="todo" title="U+026A: LATIN LETTER SMALL CAPITAL I">ɪ</td>
+<td class="todo" title="U+026B: LATIN SMALL LETTER L WITH MIDDLE TILDE">ɫ</td>
+<td class="todo" title="U+026C: LATIN SMALL LETTER L WITH BELT">ɬ</td>
+<td class="todo" title="U+026D: LATIN SMALL LETTER L WITH RETROFLEX HOOK">ɭ</td>
+<td class="todo" title="U+026E: LATIN SMALL LETTER LEZH">ɮ</td>
+<td title="U+026F: LATIN SMALL LETTER TURNED M">ɯ</td>
+	</tr>
+<tr><th>U+027x</th>
+<td class="todo" title="U+0270: LATIN SMALL LETTER TURNED M WITH LONG LEG">ɰ</td>
+<td class="todo" title="U+0271: LATIN SMALL LETTER M WITH HOOK">ɱ</td>
+<td class="todo" title="U+0272: LATIN SMALL LETTER N WITH LEFT HOOK">ɲ</td>
+<td class="todo" title="U+0273: LATIN SMALL LETTER N WITH RETROFLEX HOOK">ɳ</td>
+<td class="todo" title="U+0274: LATIN LETTER SMALL CAPITAL N">ɴ</td>
+<td class="todo" title="U+0275: LATIN SMALL LETTER BARRED O">ɵ</td>
+<td class="todo" title="U+0276: LATIN LETTER SMALL CAPITAL OE">ɶ</td>
+<td class="todo" title="U+0277: LATIN SMALL LETTER CLOSED OMEGA">ɷ</td>
+<td class="todo" title="U+0278: LATIN SMALL LETTER PHI">ɸ</td>
+<td title="U+0279: LATIN SMALL LETTER TURNED R">ɹ</td>
+<td class="todo" title="U+027A: LATIN SMALL LETTER TURNED R WITH LONG LEG">ɺ</td>
+<td class="todo" title="U+027B: LATIN SMALL LETTER TURNED R WITH HOOK">ɻ</td>
+<td class="todo" title="U+027C: LATIN SMALL LETTER R WITH LONG LEG">ɼ</td>
+<td class="todo" title="U+027D: LATIN SMALL LETTER R WITH TAIL">ɽ</td>
+<td class="todo" title="U+027E: LATIN SMALL LETTER R WITH FISHHOOK">ɾ</td>
+<td class="todo" title="U+027F: LATIN SMALL LETTER REVERSED R WITH FISHHOOK">ɿ</td>
+	</tr>
+<tr><th>U+028x</th>
+<td class="todo" title="U+0280: LATIN LETTER SMALL CAPITAL R">ʀ</td>
+<td class="todo" title="U+0281: LATIN LETTER SMALL CAPITAL INVERTED R">ʁ</td>
+<td class="todo" title="U+0282: LATIN SMALL LETTER S WITH HOOK">ʂ</td>
+<td title="U+0283: LATIN SMALL LETTER ESH">ʃ</td>
+<td class="todo" title="U+0284: LATIN SMALL LETTER DOTLESS J WITH STROKE AND HOOK">ʄ</td>
+<td title="U+0285: LATIN SMALL LETTER SQUAT REVERSED ESH">ʅ</td>
+<td class="todo" title="U+0286: LATIN SMALL LETTER ESH WITH CURL">ʆ</td>
+<td title="U+0287: LATIN SMALL LETTER TURNED T">ʇ</td>
+<td class="todo" title="U+0288: LATIN SMALL LETTER T WITH RETROFLEX HOOK">ʈ</td>
+<td class="todo" title="U+0289: LATIN SMALL LETTER U BAR">ʉ</td>
+<td class="todo" title="U+028A: LATIN SMALL LETTER UPSILON">ʊ</td>
+<td class="todo" title="U+028B: LATIN SMALL LETTER V WITH HOOK">ʋ</td>
+<td title="U+028C: LATIN SMALL LETTER TURNED V">ʌ</td><td title="U+028D: LATIN SMALL LETTER TURNED W">ʍ</td><td title="U+028E: LATIN SMALL LETTER TURNED Y">ʎ</td>
+<td class="todo" title="U+028F: LATIN LETTER SMALL CAPITAL Y">ʏ</td>
+	</tr>
+<tr><th>U+029x</th>
+<td class="todo" title="U+0290: LATIN SMALL LETTER Z WITH RETROFLEX HOOK">ʐ</td>
+<td class="todo" title="U+0291: LATIN SMALL LETTER Z WITH CURL">ʑ</td>
+<td title="U+0292: LATIN SMALL LETTER EZH">ʒ</td>
+<td class="todo" title="U+0293: LATIN SMALL LETTER EZH WITH CURL">ʓ</td>
+<td class="todo" title="U+0294: LATIN LETTER GLOTTAL STOP">ʔ</td>
+<td class="todo" title="U+0295: LATIN LETTER PHARYNGEAL VOICED FRICATIVE">ʕ</td>
+<td class="todo" title="U+0296: LATIN LETTER INVERTED GLOTTAL STOP">ʖ</td>
+<td class="todo" title="U+0297: LATIN LETTER STRETCHED C">ʗ</td>
+<td class="todo" title="U+0298: LATIN LETTER BILABIAL CLICK">ʘ</td>
+<td class="todo" title="U+0299: LATIN LETTER SMALL CAPITAL B">ʙ</td>
+<td class="todo" title="U+029A: LATIN SMALL LETTER CLOSED OPEN E">ʚ</td>
+<td class="todo" title="U+029B: LATIN LETTER SMALL CAPITAL G WITH HOOK">ʛ</td>
+<td title="U+029C: LATIN LETTER SMALL CAPITAL H">ʜ</td>
+<td class="todo" title="U+029D: LATIN SMALL LETTER J WITH CROSSED-TAIL">ʝ</td>
+<td title="U+029E: LATIN SMALL LETTER TURNED K">ʞ</td>
+<td class="todo" title="U+029F: LATIN LETTER SMALL CAPITAL L">ʟ</td>
+	</tr>
+<tr><th>U+02Ax</th>
+<td class="todo" title="U+02A0: LATIN SMALL LETTER Q WITH HOOK">ʠ</td>
+<td class="todo" title="U+02A1: LATIN LETTER GLOTTAL STOP WITH STROKE">ʡ</td>
+<td class="todo" title="U+02A2: LATIN LETTER REVERSED GLOTTAL STOP WITH STROKE">ʢ</td>
+<td class="todo" title="U+02A3: LATIN SMALL LETTER DZ DIGRAPH">ʣ</td>
+<td class="todo" title="U+02A4: LATIN SMALL LETTER DEZH DIGRAPH">ʤ</td>
+<td class="todo" title="U+02A5: LATIN SMALL LETTER DZ DIGRAPH WITH CURL">ʥ</td>
+<td class="todo" title="U+02A6: LATIN SMALL LETTER TS DIGRAPH">ʦ</td>
+<td class="todo" title="U+02A7: LATIN SMALL LETTER TESH DIGRAPH">ʧ</td>
+<td class="todo" title="U+02A8: LATIN SMALL LETTER TC DIGRAPH WITH CURL">ʨ</td>
+<td class="todo" title="U+02A9: LATIN SMALL LETTER FENG DIGRAPH">ʩ</td>
+<td class="todo" title="U+02AA: LATIN SMALL LETTER LS DIGRAPH">ʪ</td>
+<td class="todo" title="U+02AB: LATIN SMALL LETTER LZ DIGRAPH">ʫ</td>
+<td class="todo" title="U+02AC: LATIN LETTER BILABIAL PERCUSSIVE">ʬ</td>
+<td class="todo" title="U+02AD: LATIN LETTER BIDENTAL PERCUSSIVE">ʭ</td>
+<td title="U+02AE: LATIN SMALL LETTER TURNED H WITH FISHHOOK">ʮ</td><td title="U+02AF: LATIN SMALL LETTER TURNED H WITH FISHHOOK AND TAIL">ʯ</td>
+	</tr>
+
+
 	</tbody></table>
 
 <h2 id="U02B0">占位修饰符</h2>
@@ -330,7 +437,7 @@ svg:hover text{fill:#07FC}
 <p>范围：U+0300‒U+036F（112/112个码位）<a target="_blank" href="http://www.unicode.org/charts/PDF/U0300.pdf">统一码表U0300.pdf</a></p>
 <table cellspacing="0">
 <thead>
-<tr><td colspan="17" class="th">Combining Diacritical Marks／组合补充符</td></tr>
+<tr><td colspan="17" class="th">Combining Diacritical Marks</td></tr>
 	</thead>
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
@@ -444,7 +551,7 @@ svg:hover text{fill:#07FC}
 <tr><td colspan="17" class="th"><ol>注释
 <li>据Unicode 10.0</li>
 <li>原字体只含4个，还是充当<a href="#U2100">类字母符号</a>的，我尽量把常用的希腊文做了。目前有92个。</li>
-<li><ol style="list-style-type:lower-greek;margin:0">
+<li>特殊字符区域：<ol style="list-style-type:lower-greek;margin:0">
 	<li>灰色区域的码位未被分配。</li>
 	<li>格子区域还没做。</li>
 		</ol>
@@ -468,7 +575,7 @@ svg:hover text{fill:#07FC}
 	</tr>
 <tr><th>U+038x</th>
 <td colspan="4" title="保留" class="reserved"></td>
-<td title="U+0384: GREEK TONOS">΄</td><td title="U+0385: GREEK DIALYTIKA TONOS">΅</td><td title="U+0386: GREEK CAPITAL LETTER ALPHA WITH TONOS">Ά</td><td title="U+0387: GREEK ANO TELEIA">·</td><td title="U+0388: GREEK CAPITAL LETTER EPSILON WITH TONOS">Έ</td><td title="U+0389: GREEK CAPITAL LETTER ETA WITH TONOS">Ή</td><td title="U+038A: GREEK CAPITAL LETTER IOTA WITH TONOS">Ί</td>
+<td title="U+0384: GREEK TONOS">΄</td><td title="U+0385: GREEK DIALYTIKA TONOS">΅</td><td title="U+0386: GREEK CAPITAL LETTER ALPHA WITH TONOS">Ά</td><td title="U+0387: GREEK ANO TELEIA，希腊文分号"><span class="sp">·</span></td><td title="U+0388: GREEK CAPITAL LETTER EPSILON WITH TONOS">Έ</td><td title="U+0389: GREEK CAPITAL LETTER ETA WITH TONOS">Ή</td><td title="U+038A: GREEK CAPITAL LETTER IOTA WITH TONOS">Ί</td>
 <td title="保留" class="reserved"></td>
 <td title="U+038C: GREEK CAPITAL LETTER OMICRON WITH TONOS">Ό</td>
 <td title="保留" class="reserved"></td>
@@ -583,7 +690,7 @@ svg:hover text{fill:#07FC}
 <li>Unicode 3.0（630个）→5.2（640(+10)个）</li>
 <li>本区段收录大部分加拿大原住民音节文。</li>
 <li>听说搜狗输入法称之为土<sub>著</sub>音<sub>节</sub>，但创立者并非当地土著就是了……</li>
-<li>加这个只为显示“CƟNCᒧUSIƟN CƟNNE✕IƟN”里的反L而已。</li>
+<li>加这个只为显示“CƟNCᒧUSIƟN CƟNNE✕IƟN”里的翻转L而已。</li>
 </ol></td></tr>
 	</tfoot>
 <tbody>
@@ -594,15 +701,21 @@ svg:hover text{fill:#07FC}
 <p>范围：U+1D00‒U+1D7F（128/128个码位）<a target="_blank" href="http://www.unicode.org/charts/PDF/U1D00.pdf">统一码表U1D00.pdf</a></p>
 <table cellspacing="0">
 <thead>
-<tr><td colspan="17" class="th" style="width:36em">Phonetic Extensions</td></tr>
+<tr><td colspan="5" class="th" style="width:36em">Phonetic Extensions</td></tr>
 	</thead>
 <tfoot>
-<tr><td colspan="17" class="th"><ol>注释
+<tr><td colspan="5" class="th"><ol>注释
 <li>Unicode 4.0（108个）→4.1（128(+20)个）</li>
 <li>本区段收录的不是<a href="#U0250">国际音标</a>。</li>
 <li>我自制的5字符。</li>
 </ol></td></tr>
-	</tfoot></table>
+	</tfoot><tbody><tr>
+<td title="U+1D07: LATIN LETTER SMALL CAPITAL E">ᴇ</td>
+<td title="U+1D09: LATIN SMALL LETTER TURNED I">ᴉ</td>
+<td title="U+1D16: LATIN SMALL LETTER TOP HALF O">ᴖ</td>
+<td title="U+1D17: LATIN SMALL LETTER BOTTOM HALF O">ᴗ</td>
+<td title="U+1D77: LATIN SMALL LETTER TURNED G">ᵷ</td></tr>
+	</tbody></table>
 
 <h2 id="U1E00">拉丁文扩展追加</h2>
 <p>范围：U+1E00‒U+1EFF（256/256个码位）<a target="_blank" href="https://www.unicode.org/charts/PDF/U1E00.pdf">统一码表U1E00.pdf</a></p>
@@ -628,12 +741,85 @@ svg:hover text{fill:#07FC}
 	</thead>
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
-<li>本区段收录很多空格……</li>
+<li>本区段收录很多空格，请将光标悬放字符上看描述……本字体某些空格宽度可能有误。</li>
 <li>我增加到50字符。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+200x</th>
+<td class="todo" title="U+2000: EN QUAD，边长n宽的正方形空格？"><span class="sp"> </span></td>
+<td class="todo" title="U+2001: EM QUAD : mutton quad，边长M宽的正方形空格？"><span class="sp"> </span></td>
+<td class="todo" title="U+2002: EN SPACE : nut，n宽空格，½M宽"><span class="sp"> </span></td>
+<td class="todo" title="U+2003: EM SPACE : mutton，M宽空格"><span class="sp"> </span></td>
+<td class="todo" title="U+2004: THREE-PER-EM SPACE : thick space，⅓M宽空格"><span class="sp"> </span></td>
+<td class="todo" title="U+2005: FOUR-PER-EM SPACE : mid space，¼M宽空格"><span class="sp"> </span></td>
+<td class="todo" title="U+2006: SIX-PER-EM SPACE，⅙M宽空格"><span class="sp"> </span></td>
+<td title="U+2007: FIGURE SPACE，同数字宽空格"><span class="sp"> </span></td>
+<td title="U+2008: PUNCTUATION SPACE，同标点（指西文句逗）宽空格"><span class="sp"> </span></td>
+<td title="U+2009: THIN SPACE，窄空格，建议作千位分隔符，≈⅕M宽或⅙M宽或据排版调整"><span class="sp"> </span></td>
+<td title="U+200A: HAIR SPACE，发宽空格，窄于窄空格"><span class="sp"> </span></td>
+<td title="U+200B: ZERO WIDTH SPACE，〇宽空格，功能类似软连字符"><span class="sp">​</span></td>
+<td class="warn" title="U+200C<控制字>: ZERO WIDTH NON-JOINER [ZWNJ]，零宽不连字，打断连字用"><span class="sp">‌</span></td>
+<td class="warn" title="U+200D<控制字>: ZERO WIDTH JOINER [ZWJ]，零宽连字，强制连字用"><span class="sp">‍</span></td>
+<td class="warn" title="U+200E<控制字>: LEFT-TO-RIGHT MARK [LRM]，左至右符"><span class="sp">‎</span></td>
+<td class="warn" title="U+200F<控制字>: RIGHT-TO-LEFT MARK [RLM]，右至左符"><span class="sp">‏</span></td>
+	</tr>
+<tr><th>U+201x</th>
+<td title="U+2010: HYPHEN，连字号，亦英文断词标点">‐</td>
+<td class="todo" title="U+2011: NON-BREAKING HYPHEN，不换行连字号">‑</td>
+<td title="U+2012: FIGURE DASH，连数号，等宽于数字">‒</td>
+<td title="U+2013: EN DASH，n宽连接号，½M宽">–</td>
+<td title="U+2014: EM DASH，M宽连接号，破折号">—</td>
+<td title="U+2015: HORIZONTAL BAR，水平线">―</td>
+<td class="todo">‖</td>
+<td class="todo">‗</td>
+<td title="U+2018: LEFT SINGLE QUOTATION MARK">‘</td><td title="U+2019: RIGHT SINGLE QUOTATION MARK">’</td><td title="U+201A: SINGLE LOW-9 QUOTATION MARK">‚</td><td title="U+201B: SINGLE HIGH-REVERSED-9 QUOTATION MARK">‛</td><td title="U+201C: LEFT DOUBLE QUOTATION MARK">“</td><td title="U+201D: RIGHT DOUBLE QUOTATION MARK">”</td><td title="U+201E: DOUBLE LOW-9 QUOTATION MARK">„</td><td title="U+201F: DOUBLE HIGH-REVERSED-9 QUOTATION MARK">‟</td>
+	</tr>
+<tr><th>U+202x</th>
+<td title="U+2020: DAGGER">†</td><td title="U+2021: DOUBLE DAGGER">‡</td><td title="U+2022: BULLET，（标准圆形）项目符">•</td><td title="U+2023: TRIANGULAR BULLET，三角形项目符">‣</td><td title="U+2024: ONE DOT LEADER">․</td><td title="U+2025: TWO DOT LEADER">‥</td><td title="U+2026: HORIZONTAL ELLIPSIS">…</td>
+<td class="todo" title="U+2027: HYPHENATION POINT，连字点，大五码间隔号"><span class="sp">‧</span></td>
+<td colspan="7" title="省略" class="todo">･････</td>
+<td class="todo" title="U+202F: NARROW NO-BREAK SPACE [NNBSP]，不换行窄空格"><span class="sp"> </span></td>
+	</tr>
+<tr><th>U+203x</th>
+<td title="U+2030: PER MILLE SIGN">‰</td><td title="U+2031: PER TEN THOUSAND SIGN">‱</td><td title="U+2032: PRIME">′</td><td title="U+2033: DOUBLE PRIME">″</td><td title="U+2034: TRIPLE PRIME">‴</td><td title="U+2035: REVERSED PRIME">‵</td><td title="U+2036: REVERSED DOUBLE PRIME">‶</td><td title="U+2037: REVERSED TRIPLE PRIME">‷</td>
+<td class="todo">‸</td>
+<td title="U+2039: SINGLE LEFT-POINTING ANGLE QUOTATION MARK">‹</td><td title="U+203A: SINGLE RIGHT-POINTING ANGLE QUOTATION MARK">›</td><td title="U+203B: REFERENCE MARK">※</td><td title="U+203C: DOUBLE EXCLAMATION MARK">‼</td><td title="U+203D: INTERROBANG">‽</td>
+<td class="todo">‾</td>
+<td class="todo">‿</td>
+	</tr>
+<tr><th>U+204x</th>
+<td class="todo">⁀</td>
+<td class="todo">⁁</td>
+<td title="U+2042: ASTERISM">⁂</td>
+<td class="todo" title="U+2043: HYPHEN BULLET，做成连字号形的项目符">⁃</td>
+<td title="U+2044: FRACTION SLASH">⁄</td>
+<td class="todo">⁅</td>
+<td class="todo">⁆</td>
+<td title="U+2047: DOUBLE QUESTION MARK">⁇</td><td title="U+2048: QUESTION EXCLAMATION MARK">⁈</td><td title="U+2049: EXCLAMATION QUESTION MARK">⁉</td>
+<td class="todo">⁊</td>
+<td class="todo">⁋</td>
+<td class="todo" title="U+204C: BLACK LEFTWARDS BULLET，左实心项目符">⁌</td>
+<td class="todo" title="U+204D: BLACK RIGHTWARDS BULLET，右实心项目符">⁍</td>
+<td title="U+204E: LOW ASTERISK">⁎</td><td title="U+204F: REVERSED SEMICOLON">⁏</td>
+	</tr>
+<tr><th>U+205x</th>
+<td class="todo">⁐</td>
+<td title="U+2051: TWO ASTERISKS ALIGNED VERTICALLY">⁑</td><td title="U+2052: COMMERCIAL MINUS SIGN">⁒</td>
+<td class="todo" title="U+2053: SWUNG DASH，摇摆线">⁓</td>
+<td class="todo">⁔</td>
+<td class="todo">⁕</td>
+<td class="todo">⁖</td>
+<td title="U+2057: QUADRUPLE PRIME">⁗</td>
+<td class="todo">⁘</td>
+<td class="todo">⁙</td>
+<td class="todo">⁚</td>
+<td class="todo">⁛</td>
+<td class="todo">⁜</td>
+<td title="U+205D: TRICOLON">⁝</td><td title="U+205E: VERTICAL FOUR DOTS">⁞</td>
+<td class="todo" title="U+205F: MEDIUM MATHEMATICAL SPACE [MMSP]，中数学空格，⁴⁄₁₈M宽，用于数学排版"><span class="sp"> </span></td>
+	</tr>
+<tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 	</tbody></table>
 
 <h2 id="U2070">上标及下标</h2>
@@ -677,6 +863,44 @@ svg:hover text{fill:#07FC}
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+20Ax</th>
+<td class="todo">₠</td>
+<td title="U+20A1: COLON SIGN">₡</td>
+<td class="todo">₢</td>
+<td title="U+20A3: FRENCH FRANC SIGN">₣</td>
+<td title="U+20A4: LIRA SIGN">₤</td>
+<td class="todo">₥</td>
+<td title="U+20A6: NAIRA SIGN">₦</td>
+<td title="U+20A7: PESETA SIGN">₧</td>
+<td class="todo">₨</td>
+<td title="U+20A9: WON SIGN">₩</td>
+<td class="todo">₪</td>
+<td title="U+20AB: DONG SIGN">₫</td>
+<td title="U+20AC: EURO SIGN">€</td>
+<td title="U+20AD: KIP SIGN">₭</td>
+<td title="U+20AE: TUGRIK SIGN">₮</td>
+<td class="todo">₯</td>
+	</tr>
+<tr><th>U+20Bx</th>
+<td class="todo">₰</td>
+<td title="U+20B1: PESO SIGN">₱</td>
+<td title="U+20B2: GUARANI SIGN">₲</td>
+<td class="todo">₳</td>
+<td title="U+20B4: HRYVNIA SIGN">₴</td>
+<td title="U+20B5: CEDI SIGN">₵</td>
+<td class="todo">₶</td>
+<td class="todo">₷</td>
+<td title="U+20B8: TENGE SIGN">₸</td>
+<td title="U+20B9: INDIAN RUPEE SIGN">₹</td>
+<td title="U+20BA: TURKISH LIRA SIGN">₺</td>
+<td class="todo">₻</td>
+<td title="U+20BC: MANAT SIGN">₼</td>
+<td title="U+20BD: RUBLE SIGN">₽</td>
+<td class="todo">₾</td>
+<td class="todo" title="U+20BF: BITCOIN SIGN，比特币">₿</td>
+	</tr>
+<tr><th>U+20Cx</th>
+<td colspan="16" title="保留" class="reserved">（整行保留以待新货币）</td>
+	</tr>
 	</tbody></table>
 
 <h2 id="U2100">类字母符号</h2>
@@ -690,7 +914,15 @@ svg:hover text{fill:#07FC}
 <li>原ℓ是斜体而且画风不对，我改正了。</li>
 <li>补充到7字符。</li>
 </ol></td></tr>
-	</tfoot></table>
+	</tfoot><tbody><tr>
+<td title="U+2103: DEGREE CELSIUS">℃</td>
+<td title="U+2113: SCRIPT SMALL L">ℓ</td>
+<td title="U+2116: NUMERO SIGN">№</td>
+<td title="U+2122: TRADE MARK SIGN">™</td>
+<td title="U+2126: OHM SIGN">Ω</td>
+<td title="U+212A: KELVIN SIGN">K</td>
+<td title="U+212B: ANGSTROM SIGN">Å</td>
+	</tr></tbody></table>
 
 <h2 id="U2150">数字形式</h2>
 <p>范围：U+2150‒U+218F（60/64个码位）<a target="_blank" href="https://www.unicode.org/charts/PDF/U2150.pdf">统一码表U2150.pdf</a></p>
@@ -700,12 +932,40 @@ svg:hover text{fill:#07FC}
 	</thead>
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
-<li>字体本区段的符号全是自制的。</li>
-<li>共27字符。</li>
+<li>字体本区段27个字符全是自制的。</li>
+<li>顺带一提分数¼½¾在<a href="#U0080">这</a>。不会有人问²⁄₄在哪罢？</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+215x</th>
+<td class="todo">⅐</td>
+<td class="todo">⅑</td>
+<td class="todo">⅒</td>
+<td title="U+2153: VULGAR FRACTION ONE THIRD">⅓</td><td title="U+2154: VULGAR FRACTION TWO THIRDS">⅔</td>
+<td class="todo">⅕</td>
+<td class="todo">⅖</td>
+<td class="todo">⅗</td>
+<td class="todo">⅘</td>
+<td class="todo">⅙</td>
+<td class="todo">⅚</td>
+<td title="U+215B: VULGAR FRACTION ONE EIGHTH">⅛</td><td title="U+215C: VULGAR FRACTION THREE EIGHTHS">⅜</td><td title="U+215D: VULGAR FRACTION FIVE EIGHTHS">⅝</td><td title="U+215E: VULGAR FRACTION SEVEN EIGHTHS">⅞</td>
+<td class="todo">⅟</td>
+	</tr>
+<tr><th>U+216x</th>
+<td title="U+2160: ROMAN NUMERAL ONE">Ⅰ</td><td title="U+2161: ROMAN NUMERAL TWO">Ⅱ</td><td title="U+2162: ROMAN NUMERAL THREE">Ⅲ</td><td title="U+2163: ROMAN NUMERAL FOUR">Ⅳ</td><td title="U+2164: ROMAN NUMERAL FIVE">Ⅴ</td><td title="U+2165: ROMAN NUMERAL SIX">Ⅵ</td><td title="U+2166: ROMAN NUMERAL SEVEN">Ⅶ</td><td title="U+2167: ROMAN NUMERAL EIGHT">Ⅷ</td><td title="U+2168: ROMAN NUMERAL NINE">Ⅸ</td><td title="U+2169: ROMAN NUMERAL TEN">Ⅹ</td><td title="U+216A: ROMAN NUMERAL ELEVEN">Ⅺ</td><td title="U+216B: ROMAN NUMERAL TWELVE">Ⅻ</td><td title="U+216C: ROMAN NUMERAL FIFTY">Ⅼ</td><td title="U+216D: ROMAN NUMERAL ONE HUNDRED">Ⅽ</td><td title="U+216E: ROMAN NUMERAL FIVE HUNDRED">Ⅾ</td><td title="U+216F: ROMAN NUMERAL ONE THOUSAND">Ⅿ</td>
+	</tr>
+<tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
+<tr><th>U+218x</th>
+<td title="U+2180: ROMAN NUMERAL ONE THOUSAND C D">ↀ</td><td title="U+2181: ROMAN NUMERAL FIVE THOUSAND">ↁ</td><td title="U+2182: ROMAN NUMERAL TEN THOUSAND">ↂ</td><td title="U+2183: ROMAN NUMERAL REVERSED ONE HUNDRED">Ↄ</td><td title="U+2184: LATIN SMALL LETTER REVERSED C">ↄ</td>
+<td class="todo">ↅ</td>
+<td class="todo">ↆ</td>
+<td class="todo">ↇ</td>
+<td class="todo">ↈ</td>
+<td class="todo">↉</td>
+<td class="todo">↊</td>
+<td class="todo">↋</td>
+<td colspan="4" title="保留" class="reserved"></td>
+	</tr>
 	</tbody></table>
 
 <h2 id="U2190">箭头</h2>
@@ -719,7 +979,20 @@ svg:hover text{fill:#07FC}
 <li>修改了上下左右箭头以与<a href="#UFF00">半角</a>箭头区分。</li>
 <li>含10字符。</li>
 </ol></td></tr>
-	</tfoot></table>
+	</tfoot><tbody>
+<tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
+<tr><th>U+219x</th>
+<td title="U+2190: LEFTWARDS ARROW">←</td>
+<td title="U+2191: UPWARDS ARROW">↑</td>
+<td title="U+2192: RIGHTWARDS ARROW">→</td>
+<td title="U+2193: DOWNWARDS ARROW">↓</td>
+<td title="U+2194: LEFT RIGHT ARROW">↔</td>
+<td title="U+2195: UP DOWN ARROW">↕</td>
+<td title="U+2196: NORTH WEST ARROW">↖</td>
+<td title="U+2197: NORTH EAST ARROW">↗</td>
+<td title="U+2198: SOUTH EAST ARROW">↘</td>
+<td title="U+2199: SOUTH WEST ARROW">↙</td><td colspan="6" title="省略" class="todo" style="width:7em">･･･</td>
+	</tr></tbody></table>
 
 <h2 id="U2200">数学运算符</h2>
 <p>范围：U+2200‒U+22FF（256/256个码位）<a target="_blank" href="https://www.unicode.org/charts/PDF/U2200.pdf">统一码表U2200.pdf</a></p>
@@ -735,20 +1008,37 @@ svg:hover text{fill:#07FC}
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+220x</th>
+
+U+2212 − minus sign（减号）
+
 	</tbody></table>
 
 <h2 id="U2300">杂项技术符</h2>
 <p>范围：U+2300‒U+23FF（256/256个码位）<a target="_blank" href="https://www.unicode.org/charts/PDF/U2300.pdf">统一码表U2300.pdf</a></p>
 <table cellspacing="0">
 <thead>
-<tr><td colspan="17" class="th" style="width:36em">Miscellaneous Technical</td></tr>
+<tr><td colspan="13" class="th" style="width:36em">Miscellaneous Technical</td></tr>
 	</thead>
 <tfoot>
-<tr><td colspan="17" class="th"><ol>注释
-<li>字体本区段的符号全是自制的。</li>
-<li>共13字符。</li>
+<tr><td colspan="13" class="th"><ol>注释
+<li>字体本区段13个符号全是自制的。</li>
+<li>不太满意有待修改。</li>
 </ol></td></tr>
-	</tfoot></table>
+	</tfoot><tbody><tr>
+<td title="U+2312: ARC">⌒</td>
+<td title="U+23E8: DECIMAL EXPONENT SYMBOL">⏨</td>
+<td title="U+23E9: BLACK RIGHT-POINTING DOUBLE TRIANGLE">⏩</td>
+<td title="U+23EA: BLACK LEFT-POINTING DOUBLE TRIANGLE">⏪</td>
+<td title="U+23ED: BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR">⏭</td>
+<td title="U+23EE: BLACK LEFT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR">⏮</td>
+<td title="U+23EF: BLACK RIGHT-POINTING TRIANGLE WITH DOUBLE VERTICAL BAR">⏯</td>
+<td title="U+23F4: BLACK MEDIUM LEFT-POINTING TRIANGLE">⏴</td>
+<td title="U+23F5: BLACK MEDIUM RIGHT-POINTING TRIANGLE">⏵</td>
+<td title="U+23F8: DOUBLE VERTICAL BAR">⏸</td>
+<td title="U+23F9: BLACK SQUARE FOR STOP">⏹</td>
+<td title="U+23FA: BLACK CIRCLE FOR RECORD">⏺</td>
+<td title="U+23FB: POWER SYMBOL">⏻</td>
+	</tr></tbody></table>
 
 <h2 id="U2460">带圈字母数字</h2>
 <p>范围：U+2460‒U+24FF（160/160个码位）<a target="_blank" href="https://www.unicode.org/charts/PDF/U2460.pdf">统一码表U2460.pdf</a></p>
@@ -764,6 +1054,15 @@ svg:hover text{fill:#07FC}
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+246x</th>
+<td title="U+2460: CIRCLED DIGIT ONE">①</td><td title="U+2461: CIRCLED DIGIT TWO">②</td><td title="U+2462: CIRCLED DIGIT THREE">③</td><td title="U+2463: CIRCLED DIGIT FOUR">④</td><td title="U+2464: CIRCLED DIGIT FIVE">⑤</td><td title="U+2465: CIRCLED DIGIT SIX">⑥</td><td title="U+2466: CIRCLED DIGIT SEVEN">⑦</td><td title="U+2467: CIRCLED DIGIT EIGHT">⑧</td><td title="U+2468: CIRCLED DIGIT NINE">⑨</td><td title="U+2469: CIRCLED NUMBER TEN">⑩</td><td colspan="6" title="省略" class="todo">･･････</td>
+	</tr>
+<tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
+<tr><th>U+24Ex</th>
+<td colspan="10" title="省略" class="todo">･････</td>
+<td title="U+24EA: CIRCLED DIGIT ZERO">⓪</td>
+<td colspan="5" title="省略" class="todo" style="width:6em">･･･</td>
+	</tr>
+<tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 	</tbody></table>
 
 <h2 id="U2500">制表符</h2>
@@ -775,12 +1074,102 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 1.0.0（128个）</li>
-<li>字体本区段的符号全是自制的。</li>
-<li>32个常用制表符。</li>
+<li>字体本区段32个常用制表符全是自制的。</li>
+<li>确保呈方形和相连成表。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+250x</th>
+<td title="U+2500: BOX DRAWINGS LIGHT HORIZONTAL">─</td>
+<td title="U+2501: BOX DRAWINGS HEAVY HORIZONTAL">━</td>
+<td title="U+2502: BOX DRAWINGS LIGHT VERTICAL">│</td>
+<td title="U+2503: BOX DRAWINGS HEAVY VERTICAL">┃</td>
+<td class="todo" title="U+2504: BOX DRAWINGS LIGHT TRIPLE DASH HORIZONTAL">┄</td>
+<td class="todo" title="U+2505: BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL">┅</td>
+<td class="todo" title="U+2506: BOX DRAWINGS LIGHT TRIPLE DASH VERTICAL">┆</td>
+<td class="todo" title="U+2507: BOX DRAWINGS HEAVY TRIPLE DASH VERTICAL">┇</td>
+<td class="todo" title="U+2508: BOX DRAWINGS LIGHT QUADRUPLE DASH HORIZONTAL">┈</td>
+<td class="todo" title="U+2509: BOX DRAWINGS HEAVY QUADRUPLE DASH HORIZONTAL">┉</td>
+<td class="todo" title="U+250A: BOX DRAWINGS LIGHT QUADRUPLE DASH VERTICAL">┊</td>
+<td class="todo" title="U+250B: BOX DRAWINGS HEAVY QUADRUPLE DASH VERTICAL">┋</td>
+<td title="U+250C: BOX DRAWINGS LIGHT DOWN AND RIGHT">┌</td>
+<td class="todo" title="U+250D: BOX DRAWINGS DOWN LIGHT AND RIGHT HEAVY">┍</td>
+<td class="todo" title="U+250E: BOX DRAWINGS DOWN HEAVY AND RIGHT LIGHT">┎</td>
+<td title="U+250F: BOX DRAWINGS HEAVY DOWN AND RIGHT">┏</td>
+	</tr>
+<tr><th>U+251x</th>
+<td title="U+2510: BOX DRAWINGS LIGHT DOWN AND LEFT">┐</td>
+<td class="todo" title="U+2511: BOX DRAWINGS DOWN LIGHT AND LEFT HEAVY">┑</td>
+<td class="todo" title="U+2512: BOX DRAWINGS DOWN HEAVY AND LEFT LIGHT">┒</td>
+<td title="U+2513: BOX DRAWINGS HEAVY DOWN AND LEFT">┓</td>
+<td title="U+2514: BOX DRAWINGS LIGHT UP AND RIGHT">└</td>
+<td class="todo" title="U+2515: BOX DRAWINGS UP LIGHT AND RIGHT HEAVY">┕</td>
+<td class="todo" title="U+2516: BOX DRAWINGS UP HEAVY AND RIGHT LIGHT">┖</td>
+<td title="U+2517: BOX DRAWINGS HEAVY UP AND RIGHT">┗</td>
+<td title="U+2518: BOX DRAWINGS LIGHT UP AND LEFT">┘</td>
+<td class="todo" title="U+2519: BOX DRAWINGS UP LIGHT AND LEFT HEAVY">┙</td>
+<td class="todo" title="U+251A: BOX DRAWINGS UP HEAVY AND LEFT LIGHT">┚</td>
+<td title="U+251B: BOX DRAWINGS HEAVY UP AND LEFT">┛</td>
+<td title="U+251C: BOX DRAWINGS LIGHT VERTICAL AND RIGHT">├</td>
+<td title="U+251D: BOX DRAWINGS VERTICAL LIGHT AND RIGHT HEAVY">┝</td>
+<td class="todo" title="U+251E: BOX DRAWINGS UP HEAVY AND RIGHT DOWN LIGHT">┞</td>
+<td class="todo" title="U+251F: BOX DRAWINGS DOWN HEAVY AND RIGHT UP LIGHT">┟</td>
+	</tr>
+<tr><th>U+252x</th>
+<td title="U+2520: BOX DRAWINGS VERTICAL HEAVY AND RIGHT LIGHT">┠</td>
+<td class="todo" title="U+2521: BOX DRAWINGS DOWN LIGHT AND RIGHT UP HEAVY">┡</td>
+<td class="todo" title="U+2522: BOX DRAWINGS UP LIGHT AND RIGHT DOWN HEAVY">┢</td>
+<td title="U+2523: BOX DRAWINGS HEAVY VERTICAL AND RIGHT">┣</td>
+<td title="U+2524: BOX DRAWINGS LIGHT VERTICAL AND LEFT">┤</td>
+<td title="U+2525: BOX DRAWINGS VERTICAL LIGHT AND LEFT HEAVY">┥</td>
+<td class="todo" title="U+2526: BOX DRAWINGS UP HEAVY AND LEFT DOWN LIGHT">┦</td>
+<td class="todo" title="U+2527: BOX DRAWINGS DOWN HEAVY AND LEFT UP LIGHT">┧</td>
+<td title="U+2528: BOX DRAWINGS VERTICAL HEAVY AND LEFT LIGHT">┨</td>
+<td class="todo" title="U+2529: BOX DRAWINGS DOWN LIGHT AND LEFT UP HEAVY">┩</td>
+<td class="todo" title="U+252A: BOX DRAWINGS UP LIGHT AND LEFT DOWN HEAVY">┪</td>
+<td title="U+252B: BOX DRAWINGS HEAVY VERTICAL AND LEFT">┫</td>
+<td title="U+252C: BOX DRAWINGS LIGHT DOWN AND HORIZONTAL">┬</td>
+<td class="todo" title="U+252D: BOX DRAWINGS LEFT HEAVY AND RIGHT DOWN LIGHT">┭</td>
+<td class="todo" title="U+252E: BOX DRAWINGS RIGHT HEAVY AND LEFT DOWN LIGHT">┮</td>
+<td title="U+252F: BOX DRAWINGS DOWN LIGHT AND HORIZONTAL HEAVY">┯</td>
+	</tr>
+<tr><th>U+253x</th>
+<td title="U+2530: BOX DRAWINGS DOWN HEAVY AND HORIZONTAL LIGHT">┰</td>
+<td class="todo" title="U+2531: BOX DRAWINGS RIGHT LIGHT AND LEFT DOWN HEAVY">┱</td>
+<td class="todo" title="U+2532: BOX DRAWINGS LEFT LIGHT AND RIGHT DOWN HEAVY">┲</td>
+<td title="U+2533: BOX DRAWINGS HEAVY DOWN AND HORIZONTAL">┳</td>
+<td title="U+2534: BOX DRAWINGS LIGHT UP AND HORIZONTAL">┴</td>
+<td class="todo" title="U+2535: BOX DRAWINGS LEFT HEAVY AND RIGHT UP LIGHT">┵</td>
+<td class="todo" title="U+2536: BOX DRAWINGS RIGHT HEAVY AND LEFT UP LIGHT">┶</td>
+<td title="U+2537: BOX DRAWINGS UP LIGHT AND HORIZONTAL HEAVY">┷</td>
+<td title="U+2538: BOX DRAWINGS UP HEAVY AND HORIZONTAL LIGHT">┸</td>
+<td class="todo" title="U+2539: BOX DRAWINGS RIGHT LIGHT AND LEFT UP HEAVY">┹</td>
+<td class="todo" title="U+253A: BOX DRAWINGS LEFT LIGHT AND RIGHT UP HEAVY">┺</td>
+<td title="U+253B: BOX DRAWINGS HEAVY UP AND HORIZONTAL">┻</td>
+<td title="U+253C: BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL">┼</td>
+<td class="todo" title="U+253D: BOX DRAWINGS LEFT HEAVY AND RIGHT VERTICAL LIGHT">┽</td>
+<td class="todo" title="U+253E: BOX DRAWINGS RIGHT HEAVY AND LEFT VERTICAL LIGHT">┾</td>
+<td title="U+253F: BOX DRAWINGS VERTICAL LIGHT AND HORIZONTAL HEAVY">┿</td>
+	</tr>
+<tr><th>U+254x</th>
+<td class="todo" title="U+2540: BOX DRAWINGS UP HEAVY AND DOWN HORIZONTAL LIGHT">╀</td>
+<td class="todo" title="U+2541: BOX DRAWINGS DOWN HEAVY AND UP HORIZONTAL LIGHT">╁</td>
+<td title="U+2542: BOX DRAWINGS VERTICAL HEAVY AND HORIZONTAL LIGHT">╂</td>
+<td class="todo" title="U+2543: BOX DRAWINGS LEFT UP HEAVY AND RIGHT DOWN LIGHT">╃</td>
+<td class="todo" title="U+2544: BOX DRAWINGS RIGHT UP HEAVY AND LEFT DOWN LIGHT">╄</td>
+<td class="todo" title="U+2545: BOX DRAWINGS LEFT DOWN HEAVY AND RIGHT UP LIGHT">╅</td>
+<td class="todo" title="U+2546: BOX DRAWINGS RIGHT DOWN HEAVY AND LEFT UP LIGHT">╆</td>
+<td class="todo" title="U+2547: BOX DRAWINGS DOWN LIGHT AND UP HORIZONTAL HEAVY">╇</td>
+<td class="todo" title="U+2548: BOX DRAWINGS UP LIGHT AND DOWN HORIZONTAL HEAVY">╈</td>
+<td class="todo" title="U+2549: BOX DRAWINGS RIGHT LIGHT AND LEFT VERTICAL HEAVY">╉</td>
+<td class="todo" title="U+254A: BOX DRAWINGS LEFT LIGHT AND RIGHT VERTICAL HEAVY">╊</td>
+<td title="U+254B: BOX DRAWINGS HEAVY VERTICAL AND HORIZONTAL">╋</td>
+<td class="todo" title="U+254C: BOX DRAWINGS LIGHT DOUBLE DASH HORIZONTAL">╌</td>
+<td class="todo" title="U+254D: BOX DRAWINGS HEAVY DOUBLE DASH HORIZONTAL">╍</td>
+<td class="todo" title="U+254E: BOX DRAWINGS LIGHT DOUBLE DASH VERTICAL">╎</td>
+<td class="todo" title="U+254F: BOX DRAWINGS HEAVY DOUBLE DASH VERTICAL">╏</td>
+	</tr>
+<tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 	</tbody></table>
 
 <h2 id="U2580">方块元素</h2>
@@ -792,12 +1181,39 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>据Unicode 8.0</li>
-<li>字体本区段的符号全是自制的。</li>
-<li>10字符。</li>
+<li>字体本区段10个符号全是自制的。</li>
+<li>确保呈方块，以及无视字间距连成不间断的黑条。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+258x</th>
+<td title="U+2580: UPPER HALF BLOCK">▀</td><td title="U+2581: LOWER ONE EIGHTH BLOCK">▁</td><td title="U+2582: LOWER ONE QUARTER BLOCK">▂</td><td title="U+2583: LOWER THREE EIGHTHS BLOCK">▃</td><td title="U+2584: LOWER HALF BLOCK">▄</td><td title="U+2585: LOWER FIVE EIGHTHS BLOCK">▅</td><td title="U+2586: LOWER THREE QUARTERS BLOCK">▆</td><td title="U+2587: LOWER SEVEN EIGHTHS BLOCK">▇</td><td title="U+2588: FULL BLOCK">█</td>
+<td class="todo" title="U+2589: LEFT SEVEN EIGHTHS BLOCK">▉</td>
+<td class="todo" title="U+258A: LEFT THREE QUARTERS BLOCK">▊</td>
+<td class="todo" title="U+258B: LEFT FIVE EIGHTHS BLOCK">▋</td>
+<td class="todo" title="U+258C: LEFT HALF BLOCK">▌</td>
+<td class="todo" title="U+258D: LEFT THREE EIGHTHS BLOCK">▍</td>
+<td class="todo" title="U+258E: LEFT ONE QUARTER BLOCK">▎</td>
+<td class="todo" title="U+258F: LEFT ONE EIGHTH BLOCK">▏</td>
+	</tr>
+<tr><th>U+259x</th>
+<td class="todo" title="U+2590: RIGHT HALF BLOCK">▐</td>
+<td class="todo" title="U+2591: LIGHT SHADE">░</td>
+<td class="todo" title="U+2592: MEDIUM SHADE">▒</td>
+<td class="todo" title="U+2593: DARK SHADE">▓</td>
+<td title="U+2594: UPPER ONE EIGHTH BLOCK">▔</td>
+<td class="todo" title="U+2595: RIGHT ONE EIGHTH BLOCK">▕</td>
+<td class="todo" title="U+2596: QUADRANT LOWER LEFT">▖</td>
+<td class="todo" title="U+2597: QUADRANT LOWER RIGHT">▗</td>
+<td class="todo" title="U+2598: QUADRANT UPPER LEFT">▘</td>
+<td class="todo" title="U+2599: QUADRANT UPPER LEFT AND LOWER LEFT AND LOWER RIGHT">▙</td>
+<td class="todo" title="U+259A: QUADRANT UPPER LEFT AND LOWER RIGHT">▚</td>
+<td class="todo" title="U+259B: QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER LEFT">▛</td>
+<td class="todo" title="U+259C: QUADRANT UPPER LEFT AND UPPER RIGHT AND LOWER RIGHT">▜</td>
+<td class="todo" title="U+259D: QUADRANT UPPER RIGHT">▝</td>
+<td class="todo" title="U+259E: QUADRANT UPPER RIGHT AND LOWER LEFT">▞</td>
+<td class="todo" title="U+259F: QUADRANT UPPER RIGHT AND LOWER LEFT AND LOWER RIGHT">▟</td>
+	</tr>
 	</tbody></table>
 
 <h2 id="U25A0">几何图形</h2>
@@ -825,60 +1241,126 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 1.0.0（106个）→3.0（109(+3)个）→3.2（133(+24)个）→4.0（145(+12)个）→4.1（175(+30)个）→5.0（176(+1)个）→5.1（191(+15)个）→5.2（250(+59)个）→6.0（256(+6)个）</li>
-<li>本区段收录部分绘文字。</li>
-<li>22字符全是自制。空心扑克符号的粗体难画（指♤♧的梗），大概不做啦。</li>
+<li>本区段有若干符号之后被指定为<a href="#emoji">绘文字</a>。</li>
+<li>22字符全是自制，接下来想做的字符也有列出。空心扑克符号的粗体难画（指♤♧的梗），大概不做啦。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+260x</th>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td title="U+2605: BLACK STAR">★</td>
-<td title="U+2606: WHITE STAR">☆</td>
-<td colspan="16" title="省略" class="todo">･･････</td>
+<td class="todo">☀</td>
+<td class="todo">☁</td>
+<td class="todo">☂</td>
+<td class="todo">☃</td>
+<td class="todo">☄</td>
+<td title="U+2605: BLACK STAR">★</td><td title="U+2606: WHITE STAR">☆</td>
+<td class="todo">☇</td>
+<td class="todo">☈</td>
+<td class="todo">☉</td>
+<td class="todo">☊</td>
+<td class="todo">☋</td>
+<td class="todo">☌</td>
+<td class="todo">☍</td>
+<td class="todo">☎</td>
+<td class="todo">☏</td>
 	</tr>
-<tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
+<tr><th>U+261x</th>
+<td class="todo">☐</td>
+<td class="todo">☑</td>
+<td class="todo">☒</td>
+<td class="todo">☓</td>
+<td class="todo">☔</td>
+<td class="todo">☕</td>
+<td class="todo">☖</td>
+<td class="todo">☗</td>
+<td class="todo">☘</td>
+<td class="todo">☙</td>
+<td class="todo">☚</td>
+<td class="todo">☛</td>
+<td class="todo">☜</td>
+<td class="todo">☝</td>
+<td class="todo">☞</td>
+<td class="todo">☟</td>
+	</tr>
+<tr><th>U+262x</th>
+<td class="todo">☠</td>
+<td class="todo">☡</td>
+<td class="todo">☢</td>
+<td class="todo">☣</td>
+<td class="todo">☤</td>
+<td class="todo">☥</td>
+<td class="todo">☦</td>
+<td class="todo">☧</td>
+<td class="todo">☨</td>
+<td class="todo">☩</td>
+<td class="todo">☪</td>
+<td class="todo">☫</td>
+<td class="todo">☬</td>
+<td class="todo">☭</td>
+<td class="todo">☮</td>
+<td class="todo">☯</td>
+	</tr>
+<tr><th>U+263x</th>
+<td class="todo">☰</td>
+<td class="todo">☱</td>
+<td class="todo">☲</td>
+<td class="todo">☳</td>
+<td class="todo">☴</td>
+<td class="todo">☵</td>
+<td class="todo">☶</td>
+<td class="todo">☷</td>
+<td class="todo">☸</td>
+<td class="todo">☹</td>
+<td class="todo">☺</td>
+<td class="todo">☻</td>
+<td class="todo">☼</td>
+<td class="todo">☽</td>
+<td class="todo">☾</td>
+<td class="todo">☿</td>
+	</tr>
 <tr><th>U+264x</th>
 <td title="U+2640: FEMALE SIGN">♀</td>
-<td class="todo"></td>
+<td class="todo">♁</td>
 <td title="U+2642: MALE SIGN">♂</td>
-<td colspan="16" title="省略" class="todo">･･････</td>
+<td class="todo">♃</td>
+<td class="todo">♄</td>
+<td class="todo">♅</td>
+<td class="todo">♆</td>
+<td class="todo">♇</td>
+<td colspan="8" title="省略" class="todo">･･････</td>
 	</tr>
 <tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 <tr><th>U+266x</th>
-<td title="U+2660: BLACK SPADE SUIT">♠</td>
-<td title="U+2661: WHITE HEART SUIT">♡</td>
-<td title="U+2662: WHITE DIAMOND SUIT">♢</td>
-<td title="U+2663: BLACK CLUB SUIT">♣</td>
-<td title="U+2664: WHITE SPADE SUIT">♤</td>
-<td title="U+2665: BLACK HEART SUIT">♥</td>
-<td title="U+2666: BLACK DIAMOND SUIT">♦</td>
-<td title="U+2667: WHITE CLUB SUIT">♧</td>
-<td class="todo"></td>
-<td title="U+2669: QUARTER NOTE">♩</td>
-<td title="U+266A: EIGHTH NOTE">♪</td>
-<td title="U+266B: BEAMED EIGHTH NOTES">♫</td>
-<td title="U+266C: BEAMED SIXTEENTH NOTES">♬</td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
+<td title="U+2660: BLACK SPADE SUIT">♠</td><td title="U+2661: WHITE HEART SUIT">♡</td><td title="U+2662: WHITE DIAMOND SUIT">♢</td><td title="U+2663: BLACK CLUB SUIT">♣</td><td title="U+2664: WHITE SPADE SUIT">♤</td><td title="U+2665: BLACK HEART SUIT">♥</td><td title="U+2666: BLACK DIAMOND SUIT">♦</td><td title="U+2667: WHITE CLUB SUIT">♧</td>
+<td class="todo">♨</td>
+<td title="U+2669: QUARTER NOTE">♩</td><td title="U+266A: EIGHTH NOTE">♪</td><td title="U+266B: BEAMED EIGHTH NOTES">♫</td><td title="U+266C: BEAMED SIXTEENTH NOTES">♬</td>
+<td class="todo">♭</td>
+<td class="todo">♮</td>
+<td class="todo">♯</td>
+	</tr>
+<tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
+<tr><th>U+268x</th>
+<td colspan="10" title="省略" class="todo">･･････</td>
+<td class="todo">⚊</td>
+<td class="todo">⚋</td>
+<td class="todo">⚌</td>
+<td class="todo">⚍</td>
+<td class="todo">⚎</td>
+<td class="todo">⚏</td>
 	</tr>
 <tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 <tr><th>U+26Ax</th>
-<td title="U+26A2: DOUBLED FEMALE SIGN">⚢</td>
-<td title="U+26A3: DOUBLED MALE SIGN">⚣</td>
-<td title="U+26A4: INTERLOCKED FEMALE AND MALE SIGN">⚤</td>
-<td title="U+26A5: MALE AND FEMALE SIGN">⚥</td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td title="U+26AA: MEDIUM WHITE CIRCLE">⚪</td>
-<td title="U+26AB: MEDIUM BLACK CIRCLE">⚫</td>
-<td colspan="16" title="省略" class="todo">･･････</td>
+<td class="todo">⚠</td>
+<td class="todo">⚡</td>
+<td title="U+26A2: DOUBLED FEMALE SIGN">⚢</td><td title="U+26A3: DOUBLED MALE SIGN">⚣</td><td title="U+26A4: INTERLOCKED FEMALE AND MALE SIGN">⚤</td><td title="U+26A5: MALE AND FEMALE SIGN">⚥</td>
+<td class="todo">⚦</td>
+<td class="todo">⚧</td>
+<td class="todo">⚨</td>
+<td class="todo">⚩</td>
+<td title="U+26AA: MEDIUM WHITE CIRCLE">⚪</td><td title="U+26AB: MEDIUM BLACK CIRCLE">⚫</td>
+<td class="todo">⚬</td>
+<td class="todo">⚭</td>
+<td class="todo">⚮</td>
+<td class="todo">⚯</td>
 	</tr>
 <tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 	</tbody></table>
@@ -891,56 +1373,39 @@ svg:hover text{fill:#07FC}
 	</thead>
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
-<li>本区段收录某些杂锦字体的装饰图形。</li>
+<li>本区段收录某些杂锦字体的装饰图形，有若干符号之后被指定为<a href="#emoji">绘文字</a>。</li>
 <li>因为某些原因统一码规定U+2780起是无衬线样式（U+277x不规定样式），也就是说无衬线字体可以重复2遍。</li>
-<li>40字符，全是自制的。</li>
+<li>40字符全是自制，接下来想做的字符也有列出。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
-<tr><th>U+270x</th>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td title="U+2715: MULTIPLICATION X">✕</td>
-<td title="U+2716: HEAVY MULTIPLICATION X">✖</td>
-<td colspan="16" title="省略" class="todo">･･････</td>
+<tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
+<tr><th>U+271x</th>
+<td class="todo">✐</td>
+<td class="todo">✑</td>
+<td class="todo">✒</td>
+<td class="todo">✓</td>
+<td class="todo">✔</td>
+<td title="U+2715: MULTIPLICATION X">✕</td><td title="U+2716: HEAVY MULTIPLICATION X">✖</td>
+<td class="todo">✗</td>
+<td class="todo">✘</td>
+<td colspan="8" title="省略" class="todo">･････</td>
 	</tr>
 <tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 <tr><th>U+275x</th>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td title="U+275B: HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT">❛</td>
-<td title="U+275C: HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT">❜</td>
-<td title="U+275D: HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT">❝</td>
-<td title="U+275E: HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT">❞</td>
-<td title="U+275F: HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT">❟</td>
+<td colspan="11" title="省略" class="todo">･･････</td>
+<td title="U+275B: HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT">❛</td><td title="U+275C: HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT">❜</td><td title="U+275D: HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT">❝</td><td title="U+275E: HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT">❞</td><td title="U+275F: HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT">❟</td>
 	</tr>
 <tr><th>U+276x</th>
 <td title="U+2760: HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT">❠</td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td title="U+2763: HEAVY HEART EXCLAMATION MARK ORNAMENT">❣</td>
-<td title="U+2764: HEAVY BLACK HEART">❤</td>
-<td colspan="16" title="省略" class="todo">･･････</td>
+<td class="todo">❡</td>
+<td class="todo">❢</td>
+<td title="U+2763: HEAVY HEART EXCLAMATION MARK ORNAMENT">❣</td><td title="U+2764: HEAVY BLACK HEART">❤</td>
+<td class="todo">❥</td>
+<td colspan="10" title="省略" class="todo">･･････</td>
 	</tr>
 <tr><th>U+277x</th>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
-<td class="todo"></td>
+<td colspan="6" title="省略" class="todo">･････</td>
 <td title="U+2776: DINGBAT NEGATIVE CIRCLED DIGIT ONE">❶</td>
 <td title="U+2777: DINGBAT NEGATIVE CIRCLED DIGIT TWO">❷</td>
 <td title="U+2778: DINGBAT NEGATIVE CIRCLED DIGIT THREE">❸</td>
@@ -975,13 +1440,13 @@ svg:hover text{fill:#07FC}
 <td title="U+2791: DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT">➑</td>
 <td title="U+2792: DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE">➒</td>
 <td title="U+2793: DINGBAT NEGATIVE CIRCLED SANS-SERIF NUMBER TEN">➓</td>
-<td colspan="16" title="省略" class="todo">･･････</td>
+<td colspan="12" title="省略" class="todo">･･････</td>
 	</tr>
 <tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 	</tbody></table>
 
 <h2 id="U27C0">杂项数学符号</h2>
-<p>A区范围：U+27C0‒U+（48/48个码位）<a target="_blank" href="https://www.unicode.org/charts/PDF/U27C0.pdf">统一码表U27C0.pdf</a></p>
+<p>A区范围：U+27C0‒U+27EF（48/48个码位）<a target="_blank" href="https://www.unicode.org/charts/PDF/U27C0.pdf">统一码表U27C0.pdf</a></p>
 <table cellspacing="0">
 <thead>
 <tr><td colspan="2" class="th" style="width:36em">Miscellaneous Mathematical Symbols-A／杂项数学符号A区</td></tr>
@@ -1004,7 +1469,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="5" class="th"><ol>注释
 <li>Unicode 4.0（14个）→4.1（20 (+6)个）→5.0（31 (+11)个）→5.1（82 (+51)个）→5.2（87 (+5)个）→7.0（202 (+115)个）→8.0（206 (+4)个）→10.0（207 (+1)个）</li>
-<li>本<a href="#U2600">杂项符号</a>区段收录其它的<a href="#U2190">箭头</a>、<a href="#U25A0">几何图形</a>，其中若干个符号又被指定为绘文字，如中号空心星<span style="font-family:emoji,Monu11">⭐️</span></li>
+<li>本<a href="#U2600">杂项符号</a>区段收录其它的<a href="#U2190">箭头</a>、<a href="#U25A0">几何图形</a>，有若干符号之后被指定为<a href="#emoji">绘文字</a>，如中号空心星<span style="font-family:emoji,Monu11">⭐️</span></li>
 <li>显然5字符都是自制的。</li>
 </ol></td></tr>
 	</tfoot>
@@ -1025,14 +1490,14 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 1.0.0（56个）→1.0.1（56(+0)个）→1.1（57(+1)个）→3.0（61(+4)个）→3.2（64(+3)个）</li>
-<li>本区段收录东亚标点符号、〇，其中2个符号又被指定为绘文字。</li>
+<li>本区段收录东亚标点符号、〇，其中2个符号之后被指定为<a href="#emoji">绘文字</a>。</li>
 <li>标点全支持粗体，【鱼尾引号】内侧与括号匹配。</li>
 <li>本区段全是自制，格子区域在做了。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr><th>U+300x</th>
-<td title="U+3000: IDEOGRAPHIC SPACE"><span class="space">　</span></td>
+<td title="U+3000: IDEOGRAPHIC SPACE"><span class="sp">　</span></td>
 <td title="U+3001: IDEOGRAPHIC COMMA">、</td><td title="U+3002: IDEOGRAPHIC FULL STOP">。</td>
 <td title="U+3003: DITTO MARK" class="todo">〃</td><td title="U+3004: JAPANESE INDUSTRIAL STANDARD SYMBOL" class="todo">〄</td><td title="U+3005: IDEOGRAPHIC ITERATION MARK" class="todo">々</td><td title="U+3006: IDEOGRAPHIC CLOSING MARK" class="todo">〆</td><td title="U+3007: IDEOGRAPHIC NUMBER ZERO" class="todo">〇</td>
 <td title="U+3008: LEFT ANGLE BRACKET">〈</td><td title="U+3009: RIGHT ANGLE BRACKET">〉</td><td title="U+300A: LEFT DOUBLE ANGLE BRACKET">《</td><td title="U+300B: RIGHT DOUBLE ANGLE BRACKET">》</td><td title="U+300C: LEFT CORNER BRACKET">「</td><td title="U+300D: RIGHT CORNER BRACKET">」</td><td title="U+300E: LEFT WHITE CORNER BRACKET">『</td><td title="U+300F: RIGHT WHITE CORNER BRACKET">』</td></tr>
@@ -1041,7 +1506,7 @@ svg:hover text{fill:#07FC}
 <td title="U+3012: POSTAL MARK" class="todo">〒</td><td title="U+3013: GETA MARK" class="todo">〓</td><td title="U+3014: LEFT TORTOISE SHELL BRACKET" class="todo">〔</td><td title="U+3015: RIGHT TORTOISE SHELL BRACKET" class="todo">〕</td>
 <td title="U+3016: LEFT WHITE LENTICULAR BRACKET">〖</td><td title="U+3017: RIGHT WHITE LENTICULAR BRACKET">〗</td>
 <td title="U+3018: LEFT WHITE TORTOISE SHELL BRACKET" class="todo">〘</td><td title="U+3019: RIGHT WHITE TORTOISE SHELL BRACKET" class="todo">〙</td><td title="U+301A: LEFT WHITE SQUARE BRACKET" class="todo">〚</td><td title="U+301B: RIGHT WHITE SQUARE BRACKET" class="todo">〛</td>
-<td title="U+301C: WAVE DASH">〜</td><td title="U+301D: REVERSED DOUBLE PRIME QUOTATION MARK">〝</td><td title="U+301E: DOUBLE PRIME QUOTATION MARK">〞</td><td title="U+301F: LOW DOUBLE PRIME QUOTATION MARK">〟</td></tr>
+<td title="U+301C: WAVE DASH，浪纹">〜</td><td title="U+301D: REVERSED DOUBLE PRIME QUOTATION MARK">〝</td><td title="U+301E: DOUBLE PRIME QUOTATION MARK">〞</td><td title="U+301F: LOW DOUBLE PRIME QUOTATION MARK">〟</td></tr>
 <tr><th>……</th><td colspan="16" title="省略" class="todo">･･････</td></tr>
 	</tbody></table>
 
@@ -1106,7 +1571,7 @@ svg:hover text{fill:#07FC}
 <tbody>
 <tr><th>&nbsp;</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
 <tr lang="ja"><th>U+30Ax</th>
-<td title="U+30A0: KATAKANA-HIRAGANA DOUBLE HYPHEN，双连号">゠</td>
+<td title="U+30A0: KATAKANA-HIRAGANA DOUBLE HYPHEN，双连字号">゠</td>
 <td>ァ</td><td>ア</td><td>ィ</td><td>イ</td><td>ゥ</td><td>ウ</td><td>ェ</td><td>エ</td><td>ォ</td><td>オ</td><td>カ</td><td>ガ</td><td>キ</td><td>ギ</td><td>ク</td>
 	</tr>
 <tr lang="ja"><th>U+30Bx</th>
@@ -1123,7 +1588,7 @@ svg:hover text{fill:#07FC}
 	</tr>
 <tr lang="ja"><th>U+30Fx</th>
 <td>ヰ</td><td>ヱ</td><td>ヲ</td><td>ン</td><td>ヴ</td><td>ヵ</td><td>ヶ</td><td>ヷ</td><td>ヸ</td><td>ヹ</td><td>ヺ</td>
-<td title="U+30FB: KATAKANA MIDDLE DOT">・</td>
+<td title="U+30FB: KATAKANA MIDDLE DOT，兼全角间隔号"><span class="sp">・</span></td>
 <td title="U+30FC: KATAKANA-HIRAGANA PROLONGED SOUND MARK">ー</td>
 <td title="U+30FD: KATAKANA ITERATION MARK">ヽ</td>
 <td title="U+30FE: KATAKANA VOICED ITERATION MARK">ヾ</td>
@@ -1160,7 +1625,7 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>Unicode 1.0.0（187个）→1.1（249(+62)个）→4.0（256(+7)个）</li>
-<li>本区段收录<a href="#U30A0">片假名</a>及<a href="#Latn">拉丁文</a>单位、电报符号时天、日本年号等。应设计为与汉字等宽的正方形。</li>
+<li>本区段收录<a href="#U30A0">片假名</a>和<a href="#Latn">拉丁文</a>单位、电报符号时天、日本年号等。应设计为与汉字等宽的正方形。</li>
 <li>我做了21个拉丁文单位，有意没做成等宽。</li>
 </ol></td></tr>
 	</tfoot><tbody>
@@ -1232,9 +1697,9 @@ svg:hover text{fill:#07FC}
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
 <li>本区段收录各种连字，我改和画了全部拉丁文连字。</li>
-<li><ol style="list-style-type:lower-greek;margin:0">
+<li>特殊字符区域：<ol style="list-style-type:lower-greek;margin:0">
 	<li>灰色区域的码位未被分配。</li>
-	<li>粉色区域的码位亦未分配，我用来摆放自制拉丁文连字。</li>
+	<li>红色区域的码位亦未分配，我用来摆放自制拉丁文连字。</li>
 	<li>格子区域还没做。</li>
 		</ol>
 	</li>
@@ -1310,9 +1775,9 @@ svg:hover text{fill:#07FC}
 <tr><td colspan="17" class="th"><ol>注释
 <li>算是做了128个字符……</li>
 <li>半角片假名没做完直接用会社ロゴ里出处不明的顶替，已用黄色标出（这差不多就是11持续预览版的原因）。粗体的全角英文问题也没修。</li>
-<li><ol style="list-style-type:lower-greek;margin:0">
+<li>特殊字符区域：<ol style="list-style-type:lower-greek;margin:0">
 	<li>灰色区域的码位未被分配。</li>
-	<li>格子区域……几乎没人用就不做了罢？如果有人确实需要，请告诉我。</li>
+	<li>格子区域……几乎没人用就不做了罢？如果有人确实需要，请联系我。</li>
 		</ol>
 	</li>
 </ol></td></tr>
@@ -1328,7 +1793,7 @@ svg:hover text{fill:#07FC}
 <td title="U+FF06: FULLWIDTH AMPERSAND">＆</td>
 <td class="todo">＇</td>
 <td title="U+FF08: FULLWIDTH LEFT PARENTHESIS">（</td><td title="U+FF09: FULLWIDTH RIGHT PARENTHESIS">）</td><td title="U+FF0A: FULLWIDTH ASTERISK">＊</td><td title="U+FF0B: FULLWIDTH PLUS SIGN">＋</td><td title="U+FF0C: FULLWIDTH COMMA">，</td><td title="U+FF0D: FULLWIDTH HYPHEN-MINUS">－</td>
-<td class="todo">．</td>
+<td class="todo" title="U+FF0E: FULLWIDTH FULL STOP，全角句点，科技文献用">．</td>
 <td title="U+FF0F: FULLWIDTH SOLIDUS">／</td>
 	</tr>
 <tr><th>U+FF1x</th>
@@ -1352,7 +1817,7 @@ svg:hover text{fill:#07FC}
 <td class="todo">｛</td>
 <td title="U+FF5C: FULLWIDTH VERTICAL LINE">｜</td>
 <td class="todo">｝</td>
-<td title="U+FF5E: FULLWIDTH TILDE">～</td>
+<td title="U+FF5E: FULLWIDTH TILDE，不是〜U+301C">～</td>
 <td title="U+FF5F: FULLWIDTH LEFT WHITE PARENTHESIS">｟</td>
 	</tr>
 <tr><th>U+FF6x</th>
@@ -1567,7 +2032,7 @@ svg:hover text{fill:#07FC}
 <td title="U+1F10B: DINGBAT CIRCLED SANS-SERIF DIGIT ZERO">🄋</td><td title="U+1F10C: DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ZERO">🄌</td>
 	</tr></tbody></table>
 
-<h2 id="U1F300">杂项符号和象形文字</h2>
+<h2 id="U1F300">杂项符号及象形文字</h2>
 <p>范围：U+1F300‒U+1F5FF（768/768个码位）<a target="_blank" href="http://www.unicode.org/charts/PDF/U1F300.pdf">统一码表U1F300.pdf</a></p>
 <table cellspacing="0">
 <thead>
@@ -1575,7 +2040,7 @@ svg:hover text{fill:#07FC}
 	</thead>
 <tfoot>
 <tr><td colspan="1" class="th"><ol>注释
-<li>本<a href="#U2600">杂项符号</a>区段收录部分绘文字和<a href="#U2700">某些杂锦字体</a>的字符。</li>
+<li>本<a href="#U2600">杂项符号</a>区段收录部分<a href="#emoji">绘文字</a>和<a href="#U2700">某些杂锦字体</a>的字符。</li>
 <li>全统一码应该只有这个区段能摆放自制的心碎图标。</li>
 </ol></td></tr>
 	</tfoot>
@@ -1623,6 +2088,6 @@ svg:hover text{fill:#07FC}
 <option value="bold">粗体</option>
 	</select>
 </label>
-<a href="#testFont" style="background-color:#FFFE;box-shadow:0 0 .3em .5em #FFFE;position:fixed;right:1em;bottom:1em">返回目录<svg width="1.5em" height="1.2em" xmlns="http://www.w3.org/2000/svg"><text x="0" y="1.1em" style="fill:currentColor;font-family:Monu;font-size:1em">❤<animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="1.05" begin="0s" dur="1s" repeatCount="indefinite"/></text></svg></a>
+<a href="#testFont" style="background-color:#FFFE;box-shadow:0 0 .3em .5em #FFFE;position:fixed;right:1em;bottom:1em">返回目录<svg width="1.5em" height="1.2em" xmlns="http://www.w3.org/2000/svg"><text x="0" y="1.1em" style="fill:currentColor;font-family:Monu!important;font-size:1em">❤<animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="1.05" begin="0s" dur="1s" repeatCount="indefinite"/></text></svg></a>
 <br><img src="https://s01.flagcounter.com/mini/lTHA/bg_FFFFFF/txt_D1D1D1/border_FFFFFF/flags_0/" width="1"></body>
 </html>
