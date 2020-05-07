@@ -12,8 +12,8 @@
 *[title]:after{content:attr(title);font-size:.8rem;color:#FFF;background-color:#F07B;border-radius:.2em;padding:.2ex .8ch;position:absolute;visibility:hidden;z-index:1}
 *[title]:hover:after{visibility:visible}
 
-@media(min-width:64em) and (max-width:500em){
-body{grid-template-columns:1em 1fr 5fr minmax(16em,2fr) 1ch;grid-template-rows:minmax(10em,11em) 1fr 5em 1ex;grid-gap:1ch}
+@media(min-width:64em) and (max-width:999em){
+body{grid-template-columns:1em 1fr 5fr minmax(16em,2fr) 1ch;grid-template-rows:1fr 3fr 5em 1ex;grid-gap:1ch}
 header{grid-column:3;box-shadow:0 3em 1em #FFF}
 nav{grid-area:1/4/4/5}
 main{grid-area:2/3/4/4}
@@ -21,32 +21,24 @@ footer{grid-column:2}
 aside{grid-area:1/1/3/3}
 aside th{font-size:.9em}
 	}
-@media(width <= 64rem){
-body{grid-template-columns:5fr minmax(16em,2fr);grid-template-rows:1fr 1fr 2fr 5em}
-header{grid-column:1;box-shadow:0 0 1em #FFF}
-nav{grid-area:2/2/4/3}
-main{grid-area:2/1/4/2}
+@media(max-width:64rem){
+body{grid-template-columns:5fr minmax(16em,2fr);grid-template-rows:2fr 2fr 5fr 5em}
+header{grid-area:1/1/2/3}
+nav{grid-area:2/1/3/2}
+main{grid-area:3/1/4/3}
 footer{grid-column:2}
-aside{grid-area:1/2/2/3}
-aside th{font-size:.5em}aside td,aside .th{font-size:.8em}
-	}
-@media(width <= 33rem){
-body{grid-template-columns:5fr 3fr;grid-template-rows:3fr 1fr 6fr 9ex}
-header{grid-area:1/1/2/3;font-size:.7em}
-nav{grid-area:2/1/3/2;font-size:.6em}
-main{grid-area:3/1/4/3;font-size:.7em}
-footer{grid-row:4;font-size:.6em}
 aside{grid-area:2/2/3/3}
-aside th{font-size:.5em}aside td,aside .th{font-size:.5em}
+aside th,aside .th{font-size:.7em}aside td{font-size:1.5em}
 	}
 
-body{display:grid;position:fixed;height:100%;width:100%;
-font-family:Monu11,-apple-system,BlinkMacSystemFont,'Microsoft YaHei UI',sans-serif;font-size:100%;color:#222}
-header{top:1em;z-index:1}
+body{display:grid;position:fixed;height:100%;width:100%;font-family:Monu11,-apple-system,BlinkMacSystemFont,'Microsoft YaHei UI',sans-serif;font-size:100%;color:#222}
+header{margin:1em;background-color:#FFFC;z-index:1}
+p{margin:0 0 1em;font-size:.9em}
 nav{overflow:auto;
 	scrollbar-width:thin}
+nav li{font-size:.9em}
 nav > h2{text-align:right;margin:1em 2em}
-main{overflow:auto;position:relative;
+main{overflow:auto;position:relative;padding:0 0 1em 2em;
 	scrollbar-width:thin}
 	nav::-webkit-scrollbar,main::-webkit-scrollbar{width:.5em;height:.5em}
 	nav::-webkit-scrollbar-thumb,main::-webkit-scrollbar-thumb{border-radius:1em;background-color:#CCC}
@@ -67,7 +59,7 @@ a:active{background-size:1em .25em}
 a[target]:after{content:'↗';color:#07F;font-size:1.5em}
 .my1l:after{font-size:1em!important;position:relative;top:-.5em}
 b:after{font-weight:normal;margin:-1.5em -2em}
-pre{background-color:#FFFC;border:solid .1em #F07;border-radius:.2em;padding:1em;white-space:pre-line}
+pre{padding:.5em;font-size:1em;line-height:1.7em;border:solid .1em #F07;border-radius:.2em;white-space:pre-line}
 pre:focus{border-color:#07F;animation:wave .6s infinite linear;
 	background:linear-gradient(45deg,#09F9 0%,#07F1 20%,#07F3 50%,#09F9 50%) repeat-x;background-size:2em .2em}
 table{border-spacing:0;border:solid 1px #CCC;background:#EEE;text-align:center}
@@ -89,7 +81,7 @@ td[title]:after{margin:-3em}
 .warn:after{color:#FFC;background-color:#0009}
 .sp{border:.07em dotted #F07A}
 tfoot{text-align:left}
-ul{list-style:disc inside url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='5' fill='%23CCC'/%3E%3Cpath fill='%23CCC' d='M8 8h5v5H8z'%3E%3CanimateTransform attributeName='transform' type='rotate' begin='0s' dur='8s' from='0 8 8' to='360 8 8' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E");margin:.2em;padding:0}
+ul{list-style:disc inside url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='5' fill='%23CCC'/%3E%3Cpath fill='%23CCC' d='M8 8h5v5H8z'%3E%3CanimateTransform attributeName='transform' type='rotate' begin='0s' dur='8s' from='0 8 8' to='360 8 8' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E");margin:.2em;padding:0}img{opacity:0}
 ol{list-style:decimal inside;margin:.2em}
 li{margin:0 1em}
 li:hover:first-letter{color:#08F}
@@ -101,9 +93,9 @@ rt{font-size:.7em}
 <body id="testFont">
 
 <header>
-<p><a target="_blank" href="https://trello.com/b/PKO8boiM/" class="my1l">MYIL</a>: 本页比较适合火狐浏览，以下为<a target="_blank" href="https://github.com/MY1L/QuQi" class="my1l">Monu</a>可用字符（1770+个）一览。左下角可切换字体，粗体比常规缺少字符是正常的。对了，光标悬放在某些字符上会有提示。
-<br>如果发现问题请来此<a target="_blank" href="https://github.com/MY1L/QuQi/issues">告知</a>←也可来查看 已知问题/known issue.</p>
+<p><a target="_blank" href="https://trello.com/b/PKO8boiM/" class="my1l">MYIL</a>: 以下为<a target="_blank" href="https://github.com/MY1L/QuQi" class="my1l">Monu</a>可用字符（1770+个）一览。左下角可切换字体，粗体比常规缺少字符是正常的。对了，光标悬放在某些字符上会有提示。</p>
 <pre contenteditable="true">这儿可任意输入以测试Monu11预览版与其它系统字体搭配的效果。<br><span  style="color:#CCC">也推荐在此发掘字体内藏的彩蛋。</span><br><br></pre>
+<p>本页主要为火狐设计，如果发现问题请<a target="_blank" href="https://github.com/MY1L/QuQi/issues">来此</a>告知，也可来查看 已知问题/known issue.</p>
 	</header>
 
 <nav><h2 id="nav">目录</h2>
@@ -219,7 +211,6 @@ rt{font-size:.7em}
 	</aside>
 
 <main>
-
 <h1 id="BMP">基本多文种平面</h1>
 <p>Plane 0, Basic Multilingual Plane，缩写BMP，范围：U+0000‒U+FFFF</p>
 
@@ -2543,7 +2534,7 @@ rt{font-size:.7em}
 <li>需要带排版特性的女书字体请移步<a target="_blank" href="https://github.com/MY1L/Nyushu">Nyushu</a></li>
 </ol></td></tr>
 	</tfoot>
-<tbody>
+<tbody lang="zh-Nshu">
 <td title="U+1B244: NUSHU CHARACTER-1B244">𛉄</td><td title="U+1B24D: NUSHU CHARACTER-1B24D">𛉍</td><td title="U+1B2AC: NUSHU CHARACTER-1B2AC">𛊬</td><td title="U+1B2BA: NUSHU CHARACTER-1B2BA">𛊺</td>
 	</tbody></table>
 
@@ -2611,7 +2602,6 @@ rt{font-size:.7em}
 <td title="U+2CF00: CJK UNIFIED IDEOGRAPH-2CF00">𬼀</td>
 <td colspan="15" title="后面省略" style="width:19em" class="todo">······</td></tr>
 	</tbody></table>
-
 	</main>
 
 <footer>
@@ -2625,7 +2615,6 @@ rt{font-size:.7em}
 <option value="normal">常规</option>
 <option value="bold">粗体</option>
 	</select>
-
 <br>测试，慎用：
 <select onchange="testFont.style.writingMode = this.value;">
 <option value="horizontal-tb">横排</option>
