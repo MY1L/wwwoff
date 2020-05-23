@@ -225,7 +225,7 @@ rt{font-size:.7em}
 <tr><td colspan="2" class="th my1l">图例</td></tr>
 <tr><th>通常情况</th><td title="光标悬停在某些字符上会有这样的提示。">☆</td></tr>
 <tr><th>该字符不含红色部分</th><td title="比如看不见的空格，或是只能用于组合的字符。"><span class="note">◌</span>゚</td></tr>
-<tr><th>Monu粗体暂不包含</th><td class="tobo">♤</td></tr>
+<tr><th>Monu粗体暂不包含</th><td class="tobo" title="笔画密集的字符没法直接加粗。">⚢</td></tr>
 <tr><th>Monu暂不包含<br>以你的系统字体显示</th><td class="todo">￥</td></tr>
 <tr><th>字形存在问题<br>或是无字形的控制字</th><td class="warn" title="不是所有字符都有提示的，上面那个就没有。">ﾏ</td></tr>
 <tr><th>统一码规定<br>此处无字</th><td title="保留" class="resv"></td></tr>
@@ -2018,7 +2018,7 @@ rt{font-size:.7em}
 <tfoot>
 <tr><td colspan="3" class="th"><ol>注释
 <li>字体本区段自制1个标点“2倍M宽连接号”以解决中文破折号排版的问题：要么左右顶格，要么中间断开，分不清——一一。</li>
-<li>这个一般不必复制，本字体的'ccmp'特性会自动将 Shift+_ 打出的2个—合并为⸺（如果软件支持）</li>
+<li>不必复制这个“⸺”，本字体的'ccmp'特性会自动将 Shift+_ 打出的2个—合并为⸺（如果软件支持）</li>
 <li>上表没有空格，看到空白表示你的系统可能缺字体。</li>
 </ol></td></tr>
 	</tfoot><tbody><tr>
@@ -2305,10 +2305,10 @@ rt{font-size:.7em}
 	</thead>
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
-<li>本区段收录各种连字，我改和画了全部拉丁文连字。</li>
+<li>本区段收录各种连字，我改和画了全部拉丁文连字。不必复制这些字符，本字体的'liga'特性会自动连字（如果软件支持）</li>
 <li>特殊字符背景：<ol style="list-style-type:lower-greek;margin:0">
 	<li>灰色背景的码位未被分配。</li>
-	<li>红色背景的码位亦未分配，我用来摆放自制拉丁文连字。</li>
+	<li>紫色背景的码位亦未分配，我用来摆放自制拉丁文连字。</li>
 	<li>棋盘格背景还没做。</li>
 		</ol>
 	</li>
@@ -2337,11 +2337,12 @@ rt{font-size:.7em}
 	</thead>
 <tfoot>
 <tr><td colspan="17" class="th"><ol>注释
-<li>统一码用于定义变体序列的字符，简称VS，共有256个，这类字符可以改变其前方1个字符（需字体支持）。其中VS1-VS16被本区段收录，可称为通用变体选择符／General-use Variation Selectors，用于中日韩兼容汉字、数学符号、缅文、八思巴文、摩尼文等。</li>
-<li>比如在东亚标点位置变体／East Asian punctuation positional variants的情况下，VS1对应掎角形式／corner-justified form，︀VS2对应居中形式／centered form，︁详见<a target="_blank" href="https://unicode.org/Public/UNIDATA/StandardizedVariants.txt">StandardizedVariants.txt</a>，东亚标点位置变体的范例：<a target="_blank" href="https://www.unicode.org/L2/L2017/17436r-sv-eastsian-punct.pdf">L2/17-436R.pdf</a></li>
+<li>统一码用于定义变体序列的字符，简称VS，共有256个，这类字符可以改变其前方1个字符（需字体支持）。其中VS1-VS16被本区段收录，可称为〖通用变体选择符／General-use Variation Selectors〗，用于中日韩兼容汉字、数学符号、缅文、八思巴文、摩尼文等。</li>
+<li>比如在〖东亚标点位置变体／East Asian punctuation positional variants〗的情况下，VS1对应〖掎角形式／corner-justified form〗，︀VS2对应〖居中形式／centered form〗，︁详见<a target="_blank" href="https://unicode.org/Public/UNIDATA/StandardizedVariants.txt">StandardizedVariants.txt</a>，东亚标点位置变体的范例：<a target="_blank" href="https://www.unicode.org/L2/L2017/17436r-sv-eastsian-punct.pdf">L2/17-436R.pdf</a></li>
 <li>本字体支持‹ 、 。 ！ ， ． ： ； ？ ›的居中形式，尚未支持‹ ！ ： ； ？ ›的掎角形式及数学符号变体。</li>
-<li>VS15、VS16、<a href="#U2000">U+200C零宽分字符ZWNJ、U+200D零宽连字符ZWJ</a>、标记／Tags等用于<a href="#emoji">绘文字</a>显示，具体机制见<a target="_blank" href="https://www.unicode.org/reports/tr51/#Emoji_ZWJ_Sequences">UTS #51 Unicode Emoji</a>、<a target="_blank" href="http://www.unicode.org/faq/emoji_dingbats.html">FAQ</a></li>
-<li>经测试，作为〇宽结合符，即使设计了字符也会被浏览器故意忽略。本字体不是彩字，所以VS16无效，我另外制作了150%放大的彩色网页字体<a target="_blank" href="https://github.com/MY1L/wwwoff">Monu Emoj</a>，本页可以切换测试。</li>
+<li>VS15、VS16、<a href="#U2000">U+200C零宽分字符ZWNJ、U+200D零宽连字符ZWJ</a>、〖标记／Tags〗等用于<a href="#emoji">绘文字</a>显示，具体机制见<a target="_blank" href="https://www.unicode.org/reports/tr51/#Emoji_ZWJ_Sequences">UTS #51 Unicode Emoji</a>、<a target="_blank" href="http://www.unicode.org/faq/emoji_dingbats.html">FAQ</a></li>
+<li>经测试，作为〇宽结合符，即使设计了字符也会被某些浏览器故意忽略。</li>
+<li>Monu不是彩字当然VS16无效。于是我另画了同字号下相对Monu大1.5倍的彩色网页字体<a target="_blank" href="https://github.com/MY1L/wwwoff">Monu Emoj</a>，本页左下角可以切换测试。</li>
 </ol></td></tr>
 	</tfoot><tbody>
 <tr><th></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr>
@@ -2690,7 +2691,7 @@ rt{font-size:.7em}
 <tfoot>
 <tr><td colspan="12" class="th"><ol>注释
 <li>本<a href="#U2600">杂项符号</a>区段收录部分<a href="#emoji">绘文字</a>和<a href="#U2700">某些杂锦字体</a>的字符。</li>
-<li>全统一码应该只有这个区段能摆放自制的心碎图标。彩心彩圆只制作了彩色绘文字版以配套，在统一码设计上这些仅以颜色区分的绘文字没有非彩字变体。</li>
+<li>全统一码应该只有这个区段能摆放自制的心碎图标。彩心彩圆只制作了彩色绘文字版以配套，我理解统一码设定是，这些仅以颜色区分的绘文字没有非彩字变体。</li>
 <li>上表没有空格，某些旧的系统可能看不到彩字。</li>
 </ol></td></tr>
 	</tfoot>
